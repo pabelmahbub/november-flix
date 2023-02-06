@@ -8,11 +8,8 @@ import Descriptions from './Descriptions'
 function Home() {
   return (
     <div>
-        <div>
         <Navbar />
         <Banner />
-        </div>
-       
         <Descriptions />
         <CollapseSection />
         <Footer />

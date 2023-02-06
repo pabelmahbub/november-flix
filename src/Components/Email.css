@@ -1,0 +1,17 @@
+.email-placeholder {  
+    width: 70%; 
+    height: 52px; 
+    padding-left: 10px
+}
+
+.button{
+    background-color:red;
+    color:#fff;
+    height: 52px;
+    border: none;
+    border-radius: 0px;
+}
+
+.icon{
+    padding-left: 5px;
+}

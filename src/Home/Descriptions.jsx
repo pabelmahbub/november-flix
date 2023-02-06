@@ -1,70 +1,89 @@
 import React from 'react';
+import './Home.css';
 import image3 from '../Assets/images/a.jpeg';
 import family from '../Assets/images/family.jpeg';
 import fourth from '../Assets/images/fourth.jpeg';
 import kids from '../Assets/images/kids.webp';
-import man from '../Assets/images/man.webp'
+import man from '../Assets/images/man.webp';
+import ReactPlayer from 'react-player'
 
 function Descriptions() {
   return (
    <>
     {/* 1st section */}
-    <div style={{backgroundColor:'#6B728E'}}className="grid h-2"></div>
 
-    <div style={{backgroundColor:'#20262E'}} className="hero min-h-screen bg-base-100">
-    <div className="hero-content flex-col lg:flex-row-reverse">
-    <img src={family} width="40%" height="60%" />
-    <div className="pr-12">
-      <h1 style={{color:'#fff',textAlign:'left',fontFamily:'raleway'}} className="text-5xl font-bold">Enjoy on your TV</h1>
-      <p style={{color:'#fff',textAlign:'left',fontFamily:'raleway'}} className="text-2xl py-9">Watch on smart TVs, Playstation, Xbox, <br/> Chromecast, Apple TV, Blu-ray players, and<br/> more. </p>
+    <div className="grid h-2 barStyle"></div>
+
+     <div style={{backgroundColor:'#20262E'}} className="hero min-h-screen bg-base-100">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+         {/* <img src={family} height="400px" width="600px"/> */}
+         {/* <video height="400px" width="600px" controls>
+                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+            </video> */}
+
+           <ReactPlayer                                              
+               url='https://vimeo.com/243556536'
+               light = {true}
+               playing
+              controls/>
+
+        <div className="pr-12">
+          <h1 className="textLeft lg:text-6xl md:text-5xl sm:text-4xl font-bold pt-12">Enjoy on your TV</h1>
+          <p className="textLeft lg:text-2xl md:text-xl sm:text-xl py-9">Watch on smart TVs, Playstation, Xbox, <br/> Chromecast, Apple TV, Blu-ray players, and<br/> more. </p>
+        </div>
+      </div>
     </div>
-   </div>
-   </div>
    
    {/* 2nd section */}
 
-     <div style={{backgroundColor:'#6B728E'}}className="grid h-2"></div>
+   <div className="grid h-2 barStyle"></div>
 
      <div style={{backgroundColor:'#20262E'}} className="hero min-h-screen bg-base-100">
        <div className="hero-content flex-col lg:flex-row">
-        <img src={man} width="40%" height="60%" />
-     <div className="pl-12">
-      <h1 style={{color:'#fff',textAlign:'left',fontFamily:'raleway'}} className="text-5xl font-bold">Watch Everywhere.</h1>
-      <p style={{color:'#fff',textAlign:'left',fontFamily:'raleway'}} className="text-2xl py-9">Stream unlimited movies and TV shows on<br/>your phone, tablet, laptop, and Tv without<br/>paying more.</p>
+         {/* <img src={man} height="400px" width="600px"/> */}
+         <ReactPlayer                                              
+               url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+               light = {true}
+               playing
+              controls/>
+         <div className="pl-12">
+            <h1 className="textLeft lg:text-6xl md:text-5xl sm:text-4xl font-bold pt-12">Watch Everywhere.</h1>
+            <p className="textLeft lg:text-2xl md:text-xl sm:text-xl py-9">Stream unlimited movies and TV shows on<br/>your phone, tablet, laptop, and Tv without<br/>paying more.</p>
+         </div>
+       </div>
      </div>
-    </div>
-    </div>
 
     {/* 3rd section */}
-    <div style={{backgroundColor:'#6B728E'}}className="grid h-2"></div>
+    <div className="grid h-2 barStyle"></div>
 
        <div style={{backgroundColor:'#20262E'}} className="hero min-h-screen bg-base-100">
          <div className="hero-content flex-col lg:flex-row-reverse">
-            <img src={kids} width="40%" height="60%" />
-         <div className="pr-12">
-            <h1 style={{color:'#fff',textAlign:'left',fontFamily:'raleway'}} className="text-5xl font-bold">Create profiles for kids.</h1>
-            <p style={{color:'#fff',textAlign:'left',fontFamily:'raleway'}} className="text-2xl py-9">Send kids on adventures with their favorite<br/> characters in a space made just for them-free<br/> with your membership. </p>
-         </div>
+            {/* <img src={kids} height="400px" width="600px"/>  */}
+            <video height="400px" width="600px" controls>
+                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" className="videoFrame" type="video/mp4" />
+            </video> 
+            <div className="pr-12">
+               <h1 className="textLeft lg:text-6xl md:text-5xl sm:text-4xl font-bold pt-12">Create profiles for kids.</h1>
+               <p className="textLeft lg:text-2xl md:text-xl sm:text-xl py-9">Send kids on adventures with their favorite<br/> characters in a space made just for them-free<br/> with your membership. </p>
+            </div>
+        </div>
        </div>
-      </div>
 
     {/* 4th section */}
 
-    <div style={{backgroundColor:'#6B728E'}}className="grid h-2"></div>
+    <div className="grid h-2 barStyle"></div>
 
-      <div style={{backgroundColor:'#20262E', height:'400px'}} className="hero min-h-screen bg-base-100">
-        <div className="hero-content flex-col lg:flex-row">
-        <img src={fourth} width="40%" height="60%" />
-
-        <div className="pl-12">
-        <h1 style={{color:'#fff',textAlign:'left',fontFamily:'raleway'}} className="text-5xl font-bold">Download your shows<br/> to watch offline.</h1>
-        <p style={{color:'#fff',textAlign:'left',fontFamily:'raleway'}} className="text-2xl py-9">Available on all plans except basic<br/>with adds.</p>
-        </div>
-
+      <div style={{backgroundColor:'#20262E'}} className="hero min-h-screen bg-base-100">
+          <div className="hero-content flex-col lg:flex-row">
+             <img src={family} height="400px" width="600px"/>
+             <div className="pl-12">
+                 <h1 className="textLeft lg:text-6xl md:text-5xl sm:text-4xl font-bold pt-12">Download your shows<br/>to offline.</h1>
+                 <p className="textLeft lg:text-2xl md:text-xl sm:text-xl py-9">Available on all plans except basic<br/>with adds.</p>
+             </div>
+         </div>
       </div>
-    </div>
 
-     <div style={{backgroundColor:'#6B728E'}}className="grid h-2"></div>
+     <div className="grid h-2 barStyle"></div>
 
 
    </>

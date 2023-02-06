@@ -1,0 +1,38 @@
+.image {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity: 60%;
+}
+
+.textStyle {
+    color: #fff;
+    font-family: raleway
+}
+
+.textLeft {
+    color: #fff;
+    font-family: raleway;
+    text-align: left;
+}
+
+.barStyle{
+    background-color:#6B728E
+}
+
+.container{
+    background-color: #20262E
+}
+
+.collapseDiv{
+    background-color:#20262E;
+    padding-bottom: 200px;
+    padding-left: 20%;
+    padding-right: 20%
+}
+
+.collapseText{
+    text-align:center;
+    font-family:raleway;
+    color:#fff
+}

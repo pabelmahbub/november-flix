@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Footer() {
+    let year = new Date().getFullYear() 
   return (
     <div>
       <footer className="footer p-10 bg-neutral text-neutral-content">
@@ -27,7 +28,7 @@ function Footer() {
         </div>
         <div>
            <p style={{color:'#fff',fontFamily:'raleway'}}>Questions? Call 012-345-6789</p>
-           <p style={{color:'#fff',fontFamily:'raleway', fontSize:12}}>© 2023; pabelmahbub@gmail.com</p>
+           <p style={{color:'#fff',fontFamily:'raleway', fontSize:12}}>© {year}; pabelmahbub@gmail.com</p>
         </div>
 
       </footer>
