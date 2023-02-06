@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 import Navbar from '../Navbar/Navbar'
 import Banner from './Banner'
 import CollapseSection from './CollapseSection'
@@ -14,6 +15,7 @@ function Home() {
        
         <Descriptions />
         <CollapseSection />
+        <Footer />
     </div>
   )
 }

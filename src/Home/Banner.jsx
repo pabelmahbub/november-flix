@@ -1,6 +1,6 @@
 import React from 'react';
 import image1 from '../Assets/images/f.jpeg';
-import { AiOutlineRight } from 'react-icons/ai';
+import Email from '../Components/Email';
 
 function Banner() {
   return (
@@ -14,11 +14,7 @@ function Banner() {
       <p style={{color:'#fff',fontFamily:'raleway'}} className="my-5 text-3xl">Watch anywhere. Cancel anytime.</p>
       <p style={{color:'#fff',fontFamily:'raleway'}}className="my-8 text-1xl">Ready to watch? Enter your email to crate or restart your membership.</p>
 
-      <div style={{display:'flex', flexDirection:'row'}}>
-       <input style={{  width: '70%', height: '52px', paddingLeft: '10px' }} type="text" id="name" required placeholder='Email address' name="user_name" />
-      {/* <input type="text" placeholder="Type here" className="input w-full max-w-xs" /> */}
-      <button style={{backgroundColor:'red', color:'#fff', border:'none',borderRadius:0,height: '52px'}}　className="btn">Get Started<AiOutlineRight  style={{paddingLeft:'4px', height:'20px'}}/></button>
-      </div>
+      <Email />
     </div>
   </div>
 </div>

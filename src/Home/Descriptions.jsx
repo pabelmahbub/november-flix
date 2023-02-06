@@ -52,7 +52,7 @@ function Descriptions() {
 
     <div style={{backgroundColor:'#6B728E'}}className="grid h-2"></div>
 
-      <div style={{backgroundColor:'#20262E'}} className="hero min-h-screen bg-base-100">
+      <div style={{backgroundColor:'#20262E', height:'400px'}} className="hero min-h-screen bg-base-100">
         <div className="hero-content flex-col lg:flex-row">
         <img src={fourth} width="40%" height="60%" />
 
@@ -64,6 +64,7 @@ function Descriptions() {
       </div>
     </div>
 
+     <div style={{backgroundColor:'#6B728E'}}className="grid h-2"></div>
 
 
    </>
