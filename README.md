@@ -1,5 +1,5 @@
-### NOV-Flix is a video streaming site[Currently In development]
-#### live url: https://nov-flix.netlify.app/
+## NOV-Flix is a video streaming site[Currently In development]
+### live url: https://nov-flix.netlify.app/
 
 Language:
 ```
