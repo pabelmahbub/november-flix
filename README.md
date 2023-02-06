@@ -8,11 +8,9 @@ ReactJavascript)
 Tech stack and packages:
 ```
 React
-react-day-picker
 react-hook-form
 react-router@v6
 React Query
-EmailJs
 Tailwind
 DaisyUI
 Firebase
@@ -22,7 +20,6 @@ Express.js
 MongoDB
 Railway
 kommunicate.io
-talk.js
 ```
 Dependencies:
 ```
