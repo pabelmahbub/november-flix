@@ -8,15 +8,16 @@ function Banner() {
     <div className="hero min-h-screen">
        <div className="hero-overlay">
           <img className='image' src={image1} alt="Shoes"/>
-     </div>
+       </div>
 
      <div className="hero-content text-center text-neutral-content">
      <div>
 
       <h1 className="textStyle mb-5 lg:text-7xl md:text-6xl sm:text-4xl font-bold">Unlimited Movies,<br/>TV shows, and anime</h1>
-      <p className="textStyle my-5 lg:text-3xl md:text-3xl sm:text-xl">Watch anywhere. Cancel anytime.</p>
-      <p className="textStyle my-8 lg:text-2xl md:text-2xl sm:text-xl">Ready to watch? Enter your email to crate or restart your membership.</p>
-
+      <p className="textStyle my-5 lg:text-3xl md:text-2xl sm:text-2xl font-bold">Watch anywhere. Cancel anytime.</p>
+      <p className="textStyle my-8 lg:text-xl md:text-xl sm:text-sm">Ready to watch? Enter your email to crate or restart your membership.</p>
+      
+      
       <Email />
       
     </div>

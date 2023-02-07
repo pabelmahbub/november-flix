@@ -24,11 +24,21 @@
     background-color: #20262E
 }
 
+
+
 .collapseDiv{
     background-color:#20262E;
-    padding-bottom: 200px;
     padding-left: 20%;
-    padding-right: 20%
+    padding-right:20%
+}
+
+.collapseBox{
+    margin-bottom:8px;
+}
+.containerBoxOne{
+    background-color: #20262E;
+    margin-top: -8px;
+    padding-bottom: 60px;
 }
 
 .collapseText{

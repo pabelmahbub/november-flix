@@ -1,16 +1,29 @@
-import React from 'react';
-import './Email.css';
+import React,{useState} from 'react';
+import './Components.css';
 import { AiOutlineRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 
 function Email() {
+  const [value, setValue] = useState("")
+  const { t, i18n } = useTranslation();
+
+  const handleChange =(e)=>{ 
+    setValue(e.target.value);
+  }
   return (
         <div>
-           <input className='email-placeholder' type="text" id="email" required placeholder='Email address' name="email" />
-           <Link to="/signup">
-                <button className="btn button">Get Started<AiOutlineRight  className='icon'/></button>
-           </Link>
+           <input style={{color:'#000'}}className='email-placeholder' required type="text" id="email" placeholder='Email address' name="email" onChange={handleChange} />
+           {!value || value.length < 10? 
+              <Link to="/">
+                  <button  className="btn button">{t('Welcome')}<AiOutlineRight  className='icon text-white-700 text-2xl'/></button>
+              </Link>
+                 : 
+             <Link to="/signup">
+                  <button  className="btn button">{t('Welcome')}<AiOutlineRight  className='icon text-white-700 text-2xl'/></button>
+             </Link>
+             }
         </div>
   )
 }

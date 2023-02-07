@@ -46,20 +46,22 @@ const novFlixJSON =  [
 function CollapseSection() {
 
   return (
+    <>
+   
     <div className='collapseDiv'>
 
         <h1 className="collapseText text-5xl pt-24 pb-24 font-bold">Frequently asked questions</h1>
     
           {novFlixJSON.map((content) => (
-          <div style={{marginBottom:'8px'}}>
+          <div className='collapseBox'>
             <div className="collapse collapse-plus border border-base-300 bg-base-100">
               <input type="checkbox" className="peer" /> 
 
-              <div className="textLeft collapse-title bg-accent text-base-100 peer-checked:bg-accent text-base-100 pr-72">
+              <div className="textLeft collapse-title bg-accent lg:text-2xl md:text-sm sm:text-sm peer-checked:bg-accent lg:text-2xl md:text-sm sm:text-sm">
                 {content.toggle}
               </div>
               
-              <div className="textLeft collapse-content bg-accent text-base-100 peer-checked:bg-accent text-base-100"> 
+              <div className="textLeft collapse-content bg-accent lg:text-2xl md:text-sm sm:text-sm peer-checked:bg-accent lg:text-2xl md:text-sm sm:text-sm"> 
                   <p>{content.expose}</p>
                   {content?.expose1 && <p className="pt-6">{content.expose1}</p>}
               </div>
@@ -67,10 +69,15 @@ function CollapseSection() {
           </div>
           ))}
 
-         <p className="textStyle text-xl py-16">Ready to watch? Enter your email to create or restart your membership.</p>
-         <Email/>
-
+              
     </div>
+    <div className='containerBoxOne lg:px-60'>
+     <p className="textStyle text-sm py-16 px-16">Ready to watch? Enter your email to create or restart your membership.</p>
+     <Email/>
+     </div>
+     </>
+
+
   )
 }
 

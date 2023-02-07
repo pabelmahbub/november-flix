@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Home from './Home/Home';
 import SignUp from './SignUp/SignUp';
+import SignUpStep2 from './SignUp/SignUpStep2';
 
 
 
@@ -21,18 +22,10 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <div><SignUp /></div>,
   },
-  // {
-  //   path: "/recipes/:id",
-  //   element: <div><Recipe /></div>,
-  // },
-  // {
-  //   path: "/create",
-  //   element: <div><Create/></div>,
-  // },
-  // {
-  //   path: "/search",
-  //   element: <div><Search/></div>,
-  // },
+  {
+    path: "/signup/planform",
+    element: <div><SignUpStep2 /></div>,
+  },
   
 ]);
 
