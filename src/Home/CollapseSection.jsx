@@ -72,7 +72,7 @@ function CollapseSection() {
               
     </div>
     <div className='containerBoxOne lg:px-60'>
-     <p className="textStyle text-sm py-16 px-16">Ready to watch? Enter your email to create or restart your membership.</p>
+     <p className="py-16 px-16 textStyle lg:text-2xl md:text-xl sm:text-xl font-bold">Ready to watch? Enter your email to create or restart your membership.</p>
      <Email/>
      </div>
      </>
