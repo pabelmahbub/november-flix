@@ -25,19 +25,19 @@ function SignUp() {
                 <li>
                   <a>
                     <img src={check} width="23px" height="23px" alt="check-image"/>
-                    <p style={{textAlign:'left'}}>No commitments, cancel any time.</p>
+                    <p className='text-md font-bold text-left'>No commitments, cancel any time.</p>
                   </a>
                 </li>
                 <li>
                   <a>
                     <img src={check} width="23px" height="23px" alt="check-image"/>
-                    <p style={{textAlign:'left'}}>Endless entertainment for one low price.</p>
+                    <p className='text-md font-bold text-left'>Endless entertainment for one low price.</p>
                   </a>
                 </li>
                 <li>
                   <a>
                     <img src={check} width="23px" height="23px" alt="check-image"/>
-                    <p style={{textAlign:'left'}}>Unlimited viewing on all your devices</p>
+                    <p className='text-md font-bold text-left'>Unlimited viewing on all your devices</p>
                   </a>
                 </li>
               </ul>

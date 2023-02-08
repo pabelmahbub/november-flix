@@ -6,7 +6,6 @@ import standard from '../../src/Assets/images/standard.png';
 import premium from '../../src/Assets/images/premium.png';
 import lock from '../../src/Assets/images/lock.svg';
 import { Link } from 'react-router-dom'
-import Email from '../Components/Email'
 import NavbarSignUp from '../Navbar/NavbarSignUp';
 import FooterSignUp from '../Footer/FooterSignUp';
 
@@ -68,19 +67,19 @@ function SignUpStep2() {
                 <li>
                   <a>
                     <img src={check} width="23px" height="23px" alt="check-image"/>
-                    <p style={{textAlign:'left'}}>No commitments, cancel any time.</p>
+                    <p className='text-md font-bold text-left'>No commitments, cancel any time.</p>
                   </a>
                 </li>
                 <li>
                   <a>
                   <img src={check} width="23px" height="23px" alt="check-image"/>
-                    <p style={{textAlign:'left'}}>Endless entertainment for one low price.</p>
+                  <p className='text-md font-bold text-left'>Endless entertainment for one low price.</p>
                   </a>
                 </li>
                 <li>
                   <a>
                   <img src={check} width="23px" height="23px" alt="check-image"/>
-                    <p style={{textAlign:'left'}}>Unlimited viewing on all your devices</p>
+                  <p className='text-md font-bold text-left'>Unlimited viewing on all your devices</p>
                   </a>
                 </li>
               </ul>

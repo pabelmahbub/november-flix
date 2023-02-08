@@ -9,6 +9,7 @@ import SignUpStep2 from './SignUp/SignUpStep2';
 import SignUpStep3 from './SignUp/SignUpStep3';
 import SignUpStep4 from './SignUp/SignUpStep4';
 import SignUpPayment from './SignUp/SignUpPayment';
+import SignUpCredit from './SignUp/SignUpCredit';
 
 
 
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/signup/paymentPicker",
     element: <div><SignUpPayment /></div>,
+  },
+  {
+    path: "/signup/creditoption",
+    element: <div><SignUpCredit /></div>,
   },
   
 ]);

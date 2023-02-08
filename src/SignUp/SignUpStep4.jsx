@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import pc from '../../src/Assets/images/pc.jpeg'
-import { AiOutlineRight } from 'react-icons/ai';
 import FooterSignUp from '../Footer/FooterSignUp';
 import NavbarSignUp from '../Navbar/NavbarSignUp';
 
