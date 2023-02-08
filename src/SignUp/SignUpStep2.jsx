@@ -118,7 +118,7 @@ function SignUpStep2() {
 
                 <div  className="mt-12 py-3 xl:mr-24" style={{display:'flex', flexDirection:'row',backgroundColor:'#f9f8f8', borderRadius:'3px'}}>
                   <img className="mx-5" src={lock} width="23px" height="23px" alt="check-image"/>
-                   <p>Basic with ads has a limited number of movies and TV shows unavailable due to licensing restrictions. Some location and device restrictions also apply. Learn more.</p>
+                   <p>Basic with ads has a limited number of movies and TV shows unavailable due to licensing restrictions. Some location and device restrictions also apply. <span style={{color:'blue'}}>Learn more.</span></p>
                  </div>
 
 

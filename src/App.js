@@ -7,6 +7,8 @@ import Home from './Home/Home';
 import SignUp from './SignUp/SignUp';
 import SignUpStep2 from './SignUp/SignUpStep2';
 import SignUpStep3 from './SignUp/SignUpStep3';
+import SignUpStep4 from './SignUp/SignUpStep4';
+import SignUpPayment from './SignUp/SignUpPayment';
 
 
 
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/signup/registration",
     element: <div><SignUpStep3 /></div>,
+  },
+  {
+    path: "/signup/regform",
+    element: <div><SignUpStep4 /></div>,
+  },
+  {
+    path: "/signup/paymentPicker",
+    element: <div><SignUpPayment /></div>,
   },
   
 ]);

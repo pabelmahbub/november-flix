@@ -1,0 +1,33 @@
+.paymentBox{
+    padding-bottom: 6%;
+    display: flex;
+    justify-content: center
+}
+
+.encryptionBox {
+    display:flex;
+    margin-top:10px;
+}
+
+.cardStyle {
+    border-radius: 4px;
+    display:flex
+}
+
+.iconStyle{
+    position: absolute; 
+    color: #c0c0be;
+    top: 17px;
+    right: 10px
+}
+
+.imageStyle{
+    display: flex;
+    position: relative
+}
+
+.buttonStyle{
+    width: 83%;
+    border-radius: 4px;
+    font-size: 22px
+}

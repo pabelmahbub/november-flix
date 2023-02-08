@@ -46,7 +46,7 @@ function SignUpStep3() {
 
           </div>
 
-            <Link to='/signup/planform'>
+            <Link to='/signup/regform'>
               <button style={{width:'80%',borderRadius:'4px',fontSize:'22px'}}className="btn button text-transform: capitalize">Next</button>
             </Link>
        </div>
