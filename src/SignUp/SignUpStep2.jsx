@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import check from '../../src/Assets/images/red-check.svg';
+import silver1 from '../../src/Assets/images/silver-check.svg';
+import silver2 from '../../src/Assets/images/silver-check.svg';
+import silver3 from '../../src/Assets/images/silver-check.svg';
 import line from '../../src/Assets/images/line.svg';
+import rline from '../../src/Assets/images/rline.svg';
 import basic from '../../src/Assets/images/basic.png';
 import standard from '../../src/Assets/images/standard.png';
 import premium from '../../src/Assets/images/premium.png';
@@ -15,7 +19,7 @@ const novFlixJSON =  [
   "main": "Monthly price",
   "plan1": "JPY¥200",
   "plan2": "JPY¥400",
-  "plan3": "JPY¥1000",
+  "plan3": "JPY¥800",
   },
   {
     "id": 2,
@@ -34,22 +38,44 @@ const novFlixJSON =  [
   {
     "id": 4,
     "main": "Watch on your TV, computer, mobile phone and tablet",
+    "scheck1": silver1,
+    "scheck2": silver2,
+    "scheck3": silver3,
     "planImg1": check,
     "planImg2": check,
     "planImg3": check,
+    
   },
   {
     "id": 5,
     "main": "Downloads",
-    "planImg1": line,
+    "scheck1": line,
+    "scheck2": silver2,
+    "scheck3": silver3,
+    "planImg1": rline,
     "planImg2": check,
     "planImg3": check,
+    
   },
 
 
 ]
 
+
+
 function SignUpStep2() {
+
+
+// Here we keep track of button state. Initial value is false.
+const [isButtonActive1, setButtonActive1] = useState(false)
+const [isButtonActive2, setButtonActive2] = useState(false)
+const [isButtonActive3, setButtonActive3] = useState(false)
+
+// On button press, set state to be the opposite of current value.
+const onPressButton1 = () => setButtonActive1((isButtonActive1) => !isButtonActive1)
+const onPressButton2 = () => setButtonActive2((isButtonActive2) => !isButtonActive2)
+const onPressButton3 = () => setButtonActive3((isButtonActive3) => !isButtonActive3)
+
   return (
     <div>
         <NavbarSignUp />
@@ -92,9 +118,9 @@ function SignUpStep2() {
                   <thead>
                     <tr style={{marginLeft:'-50px'}}>
                       <th></th>
-                      <th><img src={basic} alt="basic" width="123px" height="133px"  style={{marginLeft:'-15px'}}/></th>
-                      <th><img src={standard} alt="basic" width="123px" height="133px" style={{marginLeft:'-15px'}}/></th>
-                      <th><img src={premium} alt="basic" width="123px" height="133px" style={{marginLeft:'-15px'}}/></th>
+                      <th onClick={onPressButton1}><img src={basic} alt="basic" width="123px" height="133px"  style={{marginLeft:'-15px'}}/></th>
+                      <th onClick={onPressButton2}><img src={standard} alt="basic" width="123px" height="133px" style={{marginLeft:'-15px'}}/></th>
+                      <th onClick={onPressButton3}><img src={premium} alt="basic" width="123px" height="133px" style={{marginLeft:'-15px'}}/></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -102,9 +128,9 @@ function SignUpStep2() {
                   {novFlixJSON.map((content) => (
                     <tr>
                       <th>{content.main}</th>
-                      <td className='font-bold'>{content?.plan1} {content?.planImg1 && <img src={content?.planImg1} width="23px" height="23px"/>}</td>
-                      <td className='font-bold'>{content?.plan2} {content?.planImg2 && <img src={content.planImg2} width="23px" height="23px"/> }</td>
-                      <td className='font-bold'>{content?.plan3} {content?.planImg3 && <img src={content.planImg3} width="23px" height="23px" />}</td>
+                      <td style={{color: isButtonActive1 && !(isButtonActive2 && !isButtonActive3) && 'red'}} className='font-bold'>{content?.plan1} {content?.planImg1 && content?.scheck1 && <img src={!isButtonActive1 && (!isButtonActive2 && !isButtonActive3) ? content?.scheck1: content?.planImg1} width="23px" height="23px"/>}</td>
+                      <td style={{color: isButtonActive2 && !(isButtonActive1 && !isButtonActive3) && 'red'}} className='font-bold'>{content?.plan2} {content?.planImg2 && content?.scheck2 &&  <img src={!isButtonActive2 && !(isButtonActive1 && isButtonActive3) ? content?.scheck2 : content.planImg2} width="23px" height="23px"/> }</td>
+                      <td style={{color: isButtonActive3 && !(isButtonActive1 && !isButtonActive2) && 'red'}} className='font-bold'>{content?.plan3} {content?.planImg3 && content?.scheck3 && <img src={!isButtonActive3 && !(isButtonActive1 && isButtonActive2) ? content?.scheck3 : content.planImg3} width="23px" height="23px" />}</td>
                   
                     </tr>
                   ))}
@@ -117,7 +143,7 @@ function SignUpStep2() {
 
                 <div  className="mt-12 py-3 xl:mr-24" style={{display:'flex', flexDirection:'row',backgroundColor:'#f9f8f8', borderRadius:'3px'}}>
                   <img className="mx-5" src={lock} width="23px" height="23px" alt="check-image"/>
-                   <p>Basic with ads has a limited number of movies and TV shows unavailable due to licensing restrictions. Some location and device restrictions also apply. <span style={{color:'blue'}}>Learn more.</span></p>
+                   <p>Basic with ads has a limited number of movies and TV shows unavailable due to licensing restrictions. Some location and device restrictions also apply. <span style={{color:'#0096FF'}}>Learn more.</span></p>
                  </div>
 
 
@@ -126,9 +152,9 @@ function SignUpStep2() {
                 </div> */}
 
                <div>
-                    <p className='pt-3' style={{fontSize:'15px'}}>Want more options? <span style={{color:'blue'}}>See all plans.</span></p>
-                    <p className='pt-3' style={{fontSize:'15px'}}>If you select Basic with ads, you will be required to provide your date of birth for ads personalization and other purposes consistent with the Nov-Flix <span style={{color:'blue'}}>Privacy Statement.</span></p>
-                    <p className='pt-3'style={{fontSize:'15px'}}>HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our <span style={{color:'blue'}}>Terms of Use </span>for more details.</p>
+                    <p className='pt-3' style={{fontSize:'15px'}}>Want more options? <span style={{color:'#0096FF'}}>See all plans.</span></p>
+                    <p className='pt-3' style={{fontSize:'15px'}}>If you select Basic with ads, you will be required to provide your date of birth for ads personalization and other purposes consistent with the Nov-Flix <span style={{color:'#0096FF'}}>Privacy Statement.</span></p>
+                    <p className='pt-3'style={{fontSize:'15px'}}>HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our <span style={{color:'#0096FF'}}>Terms of Use </span>for more details.</p>
                     <p className='pt-3' style={{fontSize:'15px'}}>Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic or Basic with ads.</p>
                 </div>
 

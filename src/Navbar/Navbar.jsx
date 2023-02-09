@@ -8,7 +8,7 @@ function Navbar() {
     <div className="navbar bg-base-100">
        <div className="flex-1">
          <Link to='/'>
-           <a className="logoText btn btn-ghost normal-case text-3xl">NOV-FLIX</a>
+           <a className="logoText btn btn-ghost normal-case lg:text-5xl md:text-3xl sm:text-3xl">NOV-FLIX</a>
          </Link>
        </div>
        <div className="flex-none mr-16">

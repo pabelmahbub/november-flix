@@ -1,6 +1,8 @@
 import './App.css';
 import {
   createBrowserRouter,
+  Route,
+  Router,
   RouterProvider,
 } from "react-router-dom";
 import Home from './Home/Home';
@@ -10,10 +12,13 @@ import SignUpStep3 from './SignUp/SignUpStep3';
 import SignUpStep4 from './SignUp/SignUpStep4';
 import SignUpPayment from './SignUp/SignUpPayment';
 import SignUpCredit from './SignUp/SignUpCredit';
+import NavbarAfterSignIn from './Navbar/NavbarAfterSignIn';
+import SignUpHome from './AfterSignUp/SignUpHome';
 
 
 
 const router = createBrowserRouter([
+
   {
     path: "/",
     element: <div><Home /></div>,
@@ -46,6 +51,10 @@ const router = createBrowserRouter([
     path: "/signup/creditoption",
     element: <div><SignUpCredit /></div>,
   },
+  {
+    path: "/signup/homepage",
+    element: <div><SignUpHome /></div>,
+  },
   
 ]);
 
@@ -53,7 +62,10 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-        <RouterProvider router = {router} />
+      
+      <RouterProvider router = {router} />
+        
+     
     </div>
   );
 }

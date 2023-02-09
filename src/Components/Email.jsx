@@ -15,7 +15,7 @@ function Email() {
   return (
         <div>
            <input style={{color:'#000',borderRadius:'0px'}}className='email-placeholder' required type="text" id="email" placeholder='Email address' name="email" onChange={handleChange} />
-           {!value || value.length < 10? 
+           {!value || value.length === 0? 
               <Link to="/">
                   <button  className="btn button">{t('Welcome')}<AiOutlineRight  className='icon text-white-700 text-2xl'/></button>
               </Link>

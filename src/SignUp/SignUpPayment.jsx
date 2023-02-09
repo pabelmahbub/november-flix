@@ -32,19 +32,19 @@ const novFlixJSON =  [
       "id": 2,
       "wallet": "Digital Wallet",
       "planImg6": paypay,
-      "path":"/signup"
+      "path":"/signup/creditoption"
     },
     {
       "id": 3,
       "mobile": "Add to mobile bill",
       "planImg7": au,
-      "path":"/signup/planform"
+      "path":"/signup/creditoption"
     },
     {
       "id": 4,
       "gift": "Gift Code",
       "planImg8":netflix,
-      "path":"/signup/registration"
+      "path":"/"
     },
 
 
