@@ -18,7 +18,7 @@ function SignUpStep3() {
           <div className="card-body items-center text-center px-12">
               <p>STEP 2 OF 3</p>
               <h2 className="card-title text-3xl">Finish setting up your <br/>account</h2>
-              <p className="text-xl">Nov-flix is personalized for you.<br/>Create a password to watch on any<br/> device at any time</p>
+              <p className="text-xl">Nenflix is personalized for you.<br/>Create a password to watch on any<br/> device at any time</p>
 
 
 

@@ -1,5 +1,5 @@
-## NOV-Flix is a video streaming site[Currently In development]
-### live url: https://nov-flix.netlify.app/
+## Nenflix is a video streaming site[Currently In development]
+### live url: https://Nenflix.netlify.app/
 
 Language:
 ```

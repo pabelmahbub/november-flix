@@ -23,7 +23,7 @@ function SignUpStep4() {
 
              <div style={{display:'flex',marginTop:'10px'}}>
                <input type="checkbox" style={{borderRadius:'0px',backgroundColor:'#fff'}} className="checkbox checkbox-md mr-3" />
-               <p className="text- pb-3">Please do not email me Nov-Flix special offers.</p>
+               <p className="text- pb-3">Please do not email me Nenflix special offers.</p>
              </div>
 
           </div>

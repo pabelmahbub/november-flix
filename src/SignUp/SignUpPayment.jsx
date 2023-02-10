@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './SignUp.css';
 import { Link } from 'react-router-dom';
 import { AiOutlineRight } from 'react-icons/ai';
@@ -13,6 +13,8 @@ import jcb from '../../src/Assets/images/jcb.svg';
 import dinners from '../../src/Assets/images/dinners.svg';
 import au from '../../src/Assets/images/au.svg';
 import american from '../../src/Assets/images/american.svg';
+import Loading from '../Components/Loading';
+
 
 
 const novFlixJSON =  [
@@ -52,7 +54,18 @@ const novFlixJSON =  [
 
 
 function SignUpPayment() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
   return (
+    <>
+    {loading ? <Loading /> :
+
     <div>
        <NavbarSignUp />
     
@@ -113,6 +126,8 @@ function SignUpPayment() {
        <FooterSignUp />
 
   </div>
+    }
+  </>
   )
 }
 

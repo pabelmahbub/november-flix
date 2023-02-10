@@ -1,14 +1,13 @@
 import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import { AiOutlineGlobal } from 'react-icons/ai';
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar">
        <div className="flex-1">
          <Link to='/'>
-           <a className="logoText btn btn-ghost normal-case lg:text-5xl md:text-3xl sm:text-3xl">NOV-FLIX</a>
+           <a className="logoText btn btn-ghost normal-case lg:text-7xl md:text-4xl sm:text-3xl lg:pl-36">Nenflix</a>
          </Link>
        </div>
        <div className="flex-none mr-16">
@@ -16,10 +15,9 @@ function Navbar() {
       
               <div className="navbar-end pr-10">
                   <select className="selectStyle select select-bordered w-full max-w-xs">
-                      <option>日本語</option>
                       <option>English</option>
+                      <option>日本語</option>
                   </select>
-              {/* <AiOutlineGlobal  style={{paddingLeft: "2px",color:'red'}}/> */}
               </div>
             
               <div className="navbar-end">

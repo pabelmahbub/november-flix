@@ -23,3 +23,11 @@
     border-radius: 25px;
     border-color: none;
 }
+
+.planDiv{
+    display: flex;
+    flex-direction: row;
+    padding-top: 13px;
+    justify-content: center;
+    margin-bottom:15px
+}

@@ -153,7 +153,7 @@ const onPressButton3 = () => setButtonActive3((isButtonActive3) => !isButtonActi
 
                <div>
                     <p className='pt-3' style={{fontSize:'15px'}}>Want more options? <span style={{color:'#0096FF'}}>See all plans.</span></p>
-                    <p className='pt-3' style={{fontSize:'15px'}}>If you select Basic with ads, you will be required to provide your date of birth for ads personalization and other purposes consistent with the Nov-Flix <span style={{color:'#0096FF'}}>Privacy Statement.</span></p>
+                    <p className='pt-3' style={{fontSize:'15px'}}>If you select Basic with ads, you will be required to provide your date of birth for ads personalization and other purposes consistent with the Nenflix <span style={{color:'#0096FF'}}>Privacy Statement.</span></p>
                     <p className='pt-3'style={{fontSize:'15px'}}>HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our <span style={{color:'#0096FF'}}>Terms of Use </span>for more details.</p>
                     <p className='pt-3' style={{fontSize:'15px'}}>Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic or Basic with ads.</p>
                 </div>

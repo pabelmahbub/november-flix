@@ -1,7 +1,8 @@
 .logoText{
     color:red;
-    font-family:Raleway;
-    font-weight:900
+    font-family:Impact,'Arial Narrow Bold', sans-serif;
+    font-weight:900;
+    text-transform: uppercase;
 }
 
 .selectStyle{
@@ -17,4 +18,10 @@
     color:#fff;
     border-radius: 4px;
     border-color: red;
+}
+
+.textSign {
+    width: 100px;
+    border-radius: 4px;
+    border-color:red
 }

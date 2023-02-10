@@ -16,9 +16,10 @@ import axios from "axios";
 
 
 
+
 function SignUpCredit() {
-    
- 
+
+
 
       
   return (
@@ -77,9 +78,15 @@ function SignUpCredit() {
 
        </div>
 
+         
+
+     
+         
          <Link to='/signup/homepage'>
            <button style={{width:'90%',borderRadius:'4px',fontSize:'22px'}}className="btn button text-transform: capitalize">Start Membership</button>
          </Link>
+        
+        
     </div>
    </div>
 
