@@ -14,6 +14,8 @@ import SignUpPayment from './SignUp/SignUpPayment';
 import SignUpCredit from './SignUp/SignUpCredit';
 import NavbarAfterSignIn from './Navbar/NavbarAfterSignIn';
 import SignUpHome from './AfterSignUp/SignUpHome';
+import SignUpLatest from './AfterSignUp/SignUpLatest';
+import SignUpSeries from './AfterSignUp/SignUpSeries';
 
 
 
@@ -54,6 +56,14 @@ const router = createBrowserRouter([
   {
     path: "/signup/homepage",
     element: <div><SignUpHome /></div>,
+  },
+  {
+    path: "/signup/latest",
+    element: <div><SignUpLatest /></div>,
+  },
+  {
+    path: "/signup/series",
+    element: <div><SignUpSeries /></div>,
   },
   
 ]);
