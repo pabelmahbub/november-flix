@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom';
 
-function MovieDetail() {
+function MovieDetail(props) {
+    const {menuId}= useParams();
 
-    const { id } = useParams();
-    // const [service, setService] = useState("");
-    // useEffect(() => {
-      
-    //     const url =`https://tech-japan-production.up.railway.app/jobs/${serviceId}`;
-    //     fetch(url)
-    //     .then(res =>res.json())
-       
-    //     .then(data => setService(data));
-    // }, [])
-
+    
   return (
     <div>
-      <h1>Movie Detail</h1>
+        <p>8888888888Hhahah</p>
+      
     </div>
   )
 }

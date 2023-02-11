@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import image1 from '../Assets/images/home-bg2.webp';
+import image1 from '../Assets/images/home-bg3.png';
 import Email from '../Components/Email';
 import Navbar from '../Navbar/Navbar';
 

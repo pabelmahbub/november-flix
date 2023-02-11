@@ -24,7 +24,7 @@ import PhotoAlbum from "react-photo-album";
 import Footer from '../Footer/Footer';
 import { shuffle } from './Shuffle';
 import { Link, useNavigate } from 'react-router-dom';
-import MovieDetail from './MovieDetail';
+import MovieDetail from './MovieDisplay';
 
 
 
@@ -121,8 +121,6 @@ function SignUpSearch() {
       
     }, [])
 
-    {console.log("movies", movies.length)}
-    
  
   return (
     <>

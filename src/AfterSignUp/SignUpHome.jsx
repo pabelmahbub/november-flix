@@ -23,6 +23,8 @@ import NavbarAfterSignIn from '../Navbar/NavbarAfterSignIn'
 import Footer from '../Footer/Footer';
 import { shuffle } from './Shuffle';
 import Loading from '../Components/Loading';
+import MovieDetail from './MovieDisplay';
+import MovieDisplay from './MovieDisplay';
 
 
 const allMoviesThumbnail =  [m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18]
@@ -34,6 +36,7 @@ const allMoviesThumbnail =  [m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,
 function SignUpHome() {
 
   const [loading, setLoading] = useState(false);
+  const [movies, setMovies] = useState([])
 
   useEffect(() => {
     setLoading(true);
@@ -41,6 +44,15 @@ function SignUpHome() {
       setLoading(false);
     }, 1000);
   }, []);
+
+
+  useEffect(() => {
+   fetch('../movies.json')
+   .then(res => res.json())
+   .then(data => setMovies(data))
+ 
+   
+ }, [])
 
  
 
@@ -54,78 +66,21 @@ function SignUpHome() {
       <div style={{backgroundColor:'#20262E',paddingBottom:'5%'}}>
         <NavbarAfterSignIn />
 
-         <div>
-            <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">New Release</h1>
-            <div  style={{backgroundColor:'#20262E'}} class="flex overflow-x-auto  bg-blue-200">
- 
-               <section  style={{display:'flex',flexDirection:'row'}} class="flex-shrink-0 border-2 border-white-300">
-                     <span style={{display:'flex'}}> {shuffle(allMoviesThumbnail).map(k => (<img src={k} class="h-72 w-60" alt=""/> ))}</span>
+          <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">7Best of 2023 & 2022</h1>
+            <div  style={{backgroundColor:'red'}}  class="flex overflow-x-auto" >
+                <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
+
+        {
+         movies.map(movie => 
+                 <MovieDisplay 
+                       key={movie.id}
+                       movie={movie}></MovieDisplay>)
+               }
+
                </section>
-            </div>
-         </div>
+          </div>
 
-         {/* second section */}
-
-         <div>
-            <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Top 10 in Japan today</h1>
-            <div  style={{backgroundColor:'#20262E'}} class="flex overflow-x-auto  bg-blue-200">
- 
-               <section  style={{display:'flex',flexDirection:'row'}} class="flex-shrink-0 border-2 border-white-300">
-                     <span style={{display:'flex'}}> {shuffle(allMoviesThumbnail).map(k => (<img src={k} class="h-72 w-60" alt=""/> ))}</span>
-               </section>
-            </div>
-         </div>
-
-         {/* Third section */}
-         
-         <div>
-            <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Oscar winning</h1>
-            <div  style={{backgroundColor:'#20262E'}} class="flex overflow-x-auto  bg-blue-200">
- 
-               <section  style={{display:'flex',flexDirection:'row'}} class="flex-shrink-0 border-2 border-white-300">
-                     <span style={{display:'flex'}}> {shuffle(allMoviesThumbnail).map(k => (
-                     <img src={k} class="h-72 w-60" alt="" style={{border:'red'}}/> ))}</span>
-               </section>
-            </div>
-         </div>
-
-         {/* Fourth section */}
-         
-         <div>
-            <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Trending now</h1>
-            <div  style={{backgroundColor:'#20262E'}} class="flex overflow-x-auto  bg-blue-200">
- 
-               <section  style={{display:'flex',flexDirection:'row'}} class="flex-shrink-0 border-2 border-white-300">
-                     <span style={{display:'flex'}}> {shuffle(allMoviesThumbnail).map(k => (<img src={k} class="h-72 w-60" alt=""/> ))}</span>
-               </section>
-            </div>
-         </div>
-
-         {/* fifth section */}
-         
-         <div>
-            <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Hollywood</h1>
-            <div  style={{backgroundColor:'#20262E'}} class="flex overflow-x-auto  bg-blue-200">
- 
-               <section  style={{display:'flex',flexDirection:'row'}} class="flex-shrink-0 border-2 border-white-300">
-                     <span style={{display:'flex'}}> {shuffle(allMoviesThumbnail).map(k => (<img src={k} class="h-72 w-60" alt=""/> ))}</span>
-               </section>
-            </div>
-         </div>
-
-         {/* Sixth section */}
-         
-         <div>
-            <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">J- Drama & K- Drama</h1>
-            <div  style={{backgroundColor:'#20262E'}} class="flex overflow-x-auto  bg-blue-200">
- 
-               <section  style={{display:'flex',flexDirection:'row'}} class="flex-shrink-0 border-2 border-white-300">
-                     <span style={{display:'flex'}}> {shuffle(allMoviesThumbnail).map(k => (<img src={k} class="h-72 w-60" alt=""/> ))}</span>
-               </section>
-            </div>
-         </div>
-
-      
+     
 
 
     </div>

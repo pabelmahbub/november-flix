@@ -7,7 +7,7 @@ function Navbar() {
     <div className="navbar">
        <div className="flex-1">
          <Link to='/'>
-           <a className="logoText btn btn-ghost normal-case text-6xl">Nenflix</a>
+           <a className="logoText btn btn-ghost normal-case lg:text-6xl md:text-5xl sm:text-9xl">Nenflix</a>
          </Link>
        </div>
        <div className="flex-none mr-16">

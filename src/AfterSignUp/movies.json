@@ -1,0 +1,58 @@
+const movieData = [
+    {
+      "id": 1,
+      "name": "The Shawshank Redemption",
+      "image": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "producer": "Niki Marvin",
+      "actor": "Tim Robbins, Morgan Freeman",
+      "genre": "Drama, horror"
+    },
+    {
+      "id": 2,
+      "name": "The Godfather",
+      "image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "producer": "Albert S. Ruddy",
+      "actor": "Marlon Brando, Al Pacino",
+      "genre": "Crime, Drama"
+    },
+    {
+      "id": 3,
+      "name": "The Dark Knight",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "producer": "Emma Thomas, Christopher Nolan",
+      "actor": "Christian Bale, Heath Ledger",
+      "genre": "Action, Crime, Drama"
+    },
+    {
+      "id": 4,
+      "name": "The Shawshank Redemption",
+      "image": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "producer": "Niki Marvin",
+      "actor": "Tim Robbins, Morgan Freeman",
+      "genre": "Drama"
+    },
+    {
+      "id": 5,
+      "name": "The Godfather",
+      "image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "producer": "Albert S. Ruddy",
+      "actor": "Marlon Brando, Al Pacino",
+      "genre": "Crime, Drama, romantic"
+    },
+    {
+      "id": 6,
+      "name": "The Dark Knight",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "producer": "Emma Thomas, Christopher Nolan",
+      "actor": "Christian Bale, Heath Ledger",
+      "genre": "Action, Crime, Drama"
+    },
+    {
+      "id": 7,
+      "name": "The Dark Knight kungfu",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "producer": "Emma Thomas, Christopher Nolan",
+      "actor": "Christian Bale, Heath Ledger",
+      "genre": "romantic, horror, drama"
+    }
+  ];
