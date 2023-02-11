@@ -17,6 +17,7 @@ import SignUpHome from './AfterSignUp/SignUpHome';
 import SignUpLatest from './AfterSignUp/SignUpLatest';
 import SignUpSeries from './AfterSignUp/SignUpSerarch';
 import SignUpSearch from './AfterSignUp/SignUpSerarch';
+import MovieDetail from './AfterSignUp/MovieDetail';
 
 
 
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
   {
     path: "/signup/search",
     element: <div><SignUpSearch /></div>,
+  },
+  {
+    path: "/signup//movieDetail/:id",
+    element: <div><MovieDetail /></div>,
   },
   
 ]);

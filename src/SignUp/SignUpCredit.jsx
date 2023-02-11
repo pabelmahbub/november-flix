@@ -18,7 +18,8 @@ import axios from "axios";
 
 
 function SignUpCredit() {
-
+ 
+  const price = 200;
 
 
       
@@ -32,7 +33,7 @@ function SignUpCredit() {
           
        <div className="card-body text-left">
            <p className="text-sm text-left">STEP 3 OF 3</p>
-           <h2 className="card-title text-3xl">Set up your credit or debit<br/>card</h2>
+           <h2 className="card-title text-4xl">Set up your credit or debit card</h2>
 
            {/* card section */}
            <div style={{display:'flex'}}>
@@ -55,7 +56,7 @@ function SignUpCredit() {
 
          <div style={{display:'flex',marginTop:'10px',backgroundColor:'#f9f8f8',flexDirection: 'row',padding:'10px',borderRadius:'4px'}}>
             <div style={{width:'50%'}}>
-              <p className='text-xl font-bold'>JPY200/month</p>
+              <p className='text-xl font-bold'>JPY{price}/month</p>
               <p className='text-xl'>Standard Plan</p>
             </div>
             <div style={{width:'50%'}}>

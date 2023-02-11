@@ -115,7 +115,7 @@ const onPressButton3 = () => setButtonActive3((isButtonActive3) => !isButtonActi
 
               <div className="overflow-x-auto table-normal pt-16">
                 <table className="">
-                  <thead>
+                  <thead> 
                     <tr style={{marginLeft:'-50px'}}>
                       <th></th>
                       <th onClick={onPressButton1}><img src={basic} alt="basic" width="123px" height="133px"  style={{marginLeft:'-15px'}}/></th>

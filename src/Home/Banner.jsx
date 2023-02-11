@@ -12,14 +12,15 @@ function Banner() {
        <div style={{position:'absolute',marginTop:'30px',width:'100%',zIndex:999999}}>
          <Navbar />
 
-      </div>
-          <img className='image' src={image1} alt="Shoes" style={{opacity:'90%'}}/>
+       </div>
+
+          <img className='image img-gradient' src={image1} alt="Shoes" style={{opacity:'90%'}}/>
        </div>
 
      <div className="hero-content text-center text-neutral-content">
      <div>
 
-      <h1 className="textStyle lg:text-7xl md:text-4xl sm:text-2xl font-bold mb-5">Unlimited Movies,<br/>TV shows, and anime</h1>
+     <h1 className="textStyle text-5xl font-bold mb-5">Unlimited Movies,<br/>TV shows, and anime</h1>
       <p className="textStyle my-5 lg:text-3xl md:text-xl sm:text-sm font-bold">Watch anywhere. Cancel anytime.</p>
       <p className="textStyle my-8 lg:text-2xl md:text-xl sm:text-sm">Ready to watch? Enter your email to crate or restart your membership.</p>
       

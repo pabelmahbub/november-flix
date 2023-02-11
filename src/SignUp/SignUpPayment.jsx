@@ -117,9 +117,9 @@ function SignUpPayment() {
                   </div>
                </div>
 
-               <Link to='/signup'>
+               {/* <Link to='/signup'>
                   <button className="buttonStyle btn button text-transform: capitalize">Next</button>
-               </Link>
+               </Link> */}
           </div>
         </div>
 
