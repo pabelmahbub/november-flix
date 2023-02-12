@@ -37,9 +37,9 @@ function Login() {
 
           </div>
 
-            {/* <Link to='/signup/paymentPicker'> */}
-              <button style={{width:'86%',borderRadius:'4px',fontSize:'22px'}}className="btn button text-transform: capitalize">Next</button>
-            {/* </Link> */}
+            <Link to='/signup/paymentPicker'> 
+            <button style={{width:'100%',borderRadius:'4px',fontSize:'22px'}} className="btn button text-transform: capitalize">Next3</button>
+            </Link> 
        </div>
       </div>
 

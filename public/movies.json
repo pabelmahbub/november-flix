@@ -483,5 +483,67 @@
     "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxMjA3MTQ5Ml5BMl5BanBnXkFtZTgwOTA1NDU4OTE@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
     "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMyNjg5ODYwNF5BMl5BanBnXkFtZTgwMTE1NDU4OTE@._V1_SY1000_CR0,0,1477,1000_AL_.jpg"
     ]
+    },
+    {
+        "id":17,
+    "ComingSoon": true,
+    "Title": "Curse",
+    "Year": "2016",
+    "Rated": "N/A",
+    "Released": "21 Dec 2016",
+    "Runtime": "N/A",
+    "Genre": "Action, Adventure, Fantasy,romantic, drama",
+    "Director": "Justin Kurzel",
+    "Writer": "Bill Collage (screenplay), Adam Cooper (screenplay), Michael Lesslie (screenplay)",
+    "Actors": "Michael Fassbender, Michael Kenneth Williams, Marion Cotillard, Jeremy Irons",
+    "Plot": "When Callum Lynch explores the memories of his ancestor Aguilar and gains the skills of a Master Assassin, he discovers he is a descendant of the secret Assassins society.",
+    "Language": "English",
+    "Country": "UK, France, USA, Hong Kong",
+    "Awards": "N/A",
+    "Poster": "https://npr.brightspotcdn.com/dims4/default/21066fa/2147483647/strip/true/crop/1707x2560+0+0/resize/880x1320!/quality/90/?url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMDVhMjMzYWItODAzYy00ODA5LWE5NWItNWQxOWVkZmI5ZWZmXkEyXkFqcGdeQXVyMzI1MzUxNjk%40._V1_.jpg",
+    "Metascore": "N/A",
+    "imdbRating": "N/A",
+    "imdbVotes": "N/A",
+    "imdbID": "tt2094766",
+    "Type": "movie",
+    "Response": "True",
+    "Images": [
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BN2EyYzgyOWEtNTY2NS00NjRjLWJiNDYtMWViMjg5MWZjYjgzXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwOWYzOTctOTc4My00ZmJkLTgzMTctMmUxNDI5ODQzYzNjXkEyXkFqcGdeQXVyNDAyODU1Njc@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BZTY5ZGUxMTAtYTU0OC00NGQ2LTkzNzgtZGZmNjlmNjY3MGU0XkEyXkFqcGdeQXVyNTY0MTkxMTg@._V1_SY1000_CR0,0,1500,1000_AL_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BZjA0MWYwZTEtYzc5Yi00NGM2LTg1YTctNjY2YzQ0NDJhZDAwXkEyXkFqcGdeQXVyNDAyODU1Njc@._V1_SY1000_CR0,0,1499,1000_AL_.jpg"
+    ]
+    },
+    {
+        "id":18,
+    "ComingSoon": true,
+    "Title": "Akashinga",
+    "Year": "2016–",
+    "Rated": "TV-MA",
+    "Released": "30 Sep 2016",
+    "Runtime": "55 min",
+    "Genre": "Action, Adventure, Fantasy,Romantic, Drama",
+    "Director": "N/A",
+    "Writer": "Cheo Hodari Coker",
+    "Actors": "Mahershala Ali, Mike Colter, Frankie Faison, Erik LaRay Harvey",
+    "Plot": "Given superstrength and durability by a sabotaged experiment, a wrongly accused man escapes prison to become a superhero for hire.",
+    "Language": "English",
+    "Country": "USA",
+    "Awards": "N/A",
+    "Poster": "https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg",
+    "Metascore": "N/A",
+    "imdbRating": "N/A",
+    "imdbVotes": "N/A",
+    "imdbID": "tt3322314",
+    "Type": "series",
+    "totalSeasons": "1",
+    "Response": "True",
+    "Images": [
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjc1NjI0NV5BMl5BanBnXkFtZTgwNzA0NzY0ODE@._V1_SY1000_CR0,0,1497,1000_AL_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI1MDg3NjY2OF5BMl5BanBnXkFtZTgwNDE1NDU4OTE@._V1_SY1000_CR0,0,1497,1000_AL_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BOTYzOTQyNDYxNl5BMl5BanBnXkFtZTgwNzA1NDU4OTE@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxMjA3MTQ5Ml5BMl5BanBnXkFtZTgwOTA1NDU4OTE@._V1_SY1000_CR0,0,1498,1000_AL_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMyNjg5ODYwNF5BMl5BanBnXkFtZTgwMTE1NDU4OTE@._V1_SY1000_CR0,0,1477,1000_AL_.jpg"
+    ]
     }
     ]

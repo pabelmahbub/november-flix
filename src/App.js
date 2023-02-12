@@ -19,6 +19,9 @@ import SignUpSeries from './AfterSignUp/SignUpSerarch';
 import SignUpSearch from './AfterSignUp/SignUpSerarch';
 import MovieDetail from './AfterSignUp/MovieDisplay';
 import Login from './SignUp/Login';
+import DetailMovie from './AfterSignUp/DetailMovie';
+import SingleMovieDetail from './AfterSignUp/SingleMovieDetail';
+import MoreMovies from './AfterSignUp/MoreMovies';
 
 
 
@@ -73,11 +76,21 @@ const router = createBrowserRouter([
     element: <div><SignUpSearch /></div>,
   },
   {
-    path: "/signup/homepage/:id",
-    element: <div><MovieDetail /></div>,
+    path: "/signup/homepage/:serviceId",
+    element: <div><DetailMovie /></div>,
+  },
+  {
+    path: "/homepage/singlemoviedetail",
+    element: <div><SingleMovieDetail /></div>,
+  },
+  {
+    path: "/homepage/moremovies",
+    element: <div><MoreMovies /></div>,
   },
 
 ]);
+
+
 
 
 function App() {
