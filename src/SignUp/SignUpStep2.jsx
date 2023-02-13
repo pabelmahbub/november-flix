@@ -80,7 +80,7 @@ const onPressButton3 = () => setButtonActive3((isButtonActive3) => !isButtonActi
     <div>
         <NavbarSignUp />
 
-            <div style={{display:'flex', justifyContent:'center',paddingLeft:"15%",paddingRight:"15%",paddingBottom:'10%'}}>
+            <div style={{display:'flex', justifyContent:'center',marginLeft:"25%",marginRight:"15%",paddingBottom:'10%'}}>
                <div className="card  bg-base-100">
               {/* <figure className="px-10 pt-10">
                 <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
