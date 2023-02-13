@@ -19,8 +19,8 @@ function Login() {
              
           <div className="card-body text-left">
               <p className="text-sm text-left">STEP 2 OF 3</p>
-              <h2 className="card-title text-3xl">Login-Create a password to start<br/>your membership</h2>
-              <p className="text-xl pb-3">Just a few more steps and you're done!<br/>We hate paperwork too.</p>
+              <h2 className="card-title text-3xl">Login to enjoy your favorite movies!</h2>
+              <p className="text-xl pb-3">Input Email and Password!<br/>Choose your favorite movies!</p>
                 
                 <Form onSubmit={handleLogin}>
                 <input type="text" name="email" placeholder="Email" style={{borderRadius:'0px'}} className="input input-bordered  w-full mb-2" />
@@ -37,8 +37,8 @@ function Login() {
 
           </div>
 
-            <Link to='/signup/paymentPicker'> 
-            <button style={{width:'100%',borderRadius:'4px',fontSize:'22px'}} className="btn button text-transform: capitalize">Next3</button>
+            <Link to='/homepage'> 
+            <button style={{width:'90%',borderRadius:'4px',fontSize:'22px'}} className="btn button text-transform: capitalize">Next3</button>
             </Link> 
        </div>
       </div>

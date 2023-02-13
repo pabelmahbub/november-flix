@@ -71,7 +71,7 @@ function SignUpHome() {
                 <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
 
         {
-         movies.map(movie => 
+         shuffle(movies).map(movie => 
                  <MovieDisplay 
                        key={movie.id}
                        movie={movie}></MovieDisplay>)
@@ -80,7 +80,47 @@ function SignUpHome() {
                </section>
           </div>
 
+
+          {/* second section: */}
+
+
+          <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Oscar and Grammy winning movies</h1>
+            <div  class="flex overflow-x-auto" >
+                <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
+
+        {
+         shuffle(movies).map(movie => 
+                 <MovieDisplay 
+                       key={movie.id}
+                       movie={movie}></MovieDisplay>)
+               }
+
+               </section>
+          </div>
+
+
+           {/* third section: */}
+
+
+           <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Best 10 in Japan this week</h1>
+            <div  class="flex overflow-x-auto" >
+                <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
+
+        {
+         shuffle(movies).map(movie => 
+                 <MovieDisplay 
+                       key={movie.id}
+                       movie={movie}></MovieDisplay>)
+               }
+
+               </section>
+          </div>
+
+
      
+
+
+
 
 
     </div>

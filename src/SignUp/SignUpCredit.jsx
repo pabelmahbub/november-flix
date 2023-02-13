@@ -83,7 +83,7 @@ function SignUpCredit() {
 
      
          
-         <Link to='/signup/homepage'>
+         <Link to='/homepage'>
            <button style={{width:'90%',borderRadius:'4px',fontSize:'22px'}}className="btn button text-transform: capitalize">Start Membership</button>
          </Link>
         

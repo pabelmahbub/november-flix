@@ -7,10 +7,10 @@ function Navbar() {
     <div className="navbar">
        <div className="flex-1">
          <Link to='/'>
-           <a className="logoText btn btn-ghost normal-case lg:text-6xl md:text-5xl sm:text-9xl">Nenflix</a>
+           <a className="logoText btn btn-ghost normal-case text-5xl">Nenflix</a>
          </Link>
        </div>
-       <div className="flex-none mr-16">
+       <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
       
               <div className="navbar-end pr-10">
@@ -22,7 +22,7 @@ function Navbar() {
             
               <div className="navbar-end">
               <Link to='/signup'>
-                  <a className="signInText btn">Sign In</a>
+                  <a className="signInText btn">Sign Up</a>
                 </Link>
               </div>
           

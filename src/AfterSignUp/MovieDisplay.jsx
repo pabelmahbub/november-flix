@@ -14,11 +14,11 @@ function MovieDisplay(props) {
     <div >
 
                 {/* first section */}
+                <Link to={`/homepage/${id}`}>
                    <img src={Poster} class="h-72 w-60" alt="" style={{objectFit:'cover'}}/>
-                   <p  style={{color:'#fff',fontSize:'20px',fontWeight:'bold'}}>{Title}</p> 
+                   <p  style={{color:'#fff',fontSize:'18px',fontWeight:'bold',fontFamily:'raleway'}} className="py-2">{Title}</p> 
                
-                    <Link to={`/signup/homepage/${id}`}>
-                    <button style={{paddingBottom:'8px',color:'white',fontSize:'11px',fontWeight:'bold', borderColor:'white',borderWidth:'1px',padding:'5px',marginBottom:'8px',marginTop:'5px'}}>More Info</button>
+                  
                   </Link> 
 
 

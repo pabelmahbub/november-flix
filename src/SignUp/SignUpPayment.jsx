@@ -97,14 +97,14 @@ function SignUpPayment() {
                           <div className='px-4 text-md font-bold mt-1'> {content?.credit}{content?.wallet}{content?.mobile}{content?.gift}</div>
 
                               <div className='imageStyle'>
-                                  {content?.planImg1 && <img src={content?.planImg1} width="33px" className='mr-4' alt=""/>}
-                                  {content?.planImg2 &&<img src={content?.planImg2} width="25px" className='mr-4' alt=""/>}
-                                  {content?.planImg3 && <img src={content?.planImg3} width="20px" className='mr-4' alt="" />}
-                                  {content?.planImg4 &&<img src={content?.planImg4} width="20px" className='mr-4 mt-2' alt=""/>}
-                                  {content?.planImg5 && <img src={content?.planImg5} width="50px" className='mr-4' alt="" />}
-                                  {content?.planImg6 &&<img src={content?.planImg6} width="60px" className='mr-4' alt=""/>}
-                                  {content?.planImg7 && <img src={content?.planImg7} width="30px" className='mr-4' alt=""/>}
-                                  {content?.planImg8 &&<img src={content?.planImg8} width="35px" className='mr-4' alt=""/>}
+                                  {content?.planImg1 && <img src={content?.planImg1} width="33px" className='lg:mr-4 md:mr-4 sm:mr-2' alt=""/>}
+                                  {content?.planImg2 &&<img src={content?.planImg2} width="25px" className='lg:mr-4 md:mr-4 sm:mr-2' alt=""/>}
+                                  {content?.planImg3 && <img src={content?.planImg3} width="20px" className='lg:mr-4 md:mr-4 sm:mr-2' alt="" />}
+                                  {content?.planImg4 &&<img src={content?.planImg4} width="20px" className='lg:mr-4 md:mr-4 sm:mr-2 mt-2' alt=""/>}
+                                  {content?.planImg5 && <img src={content?.planImg5} width="50px" className='lg:mr-4 md:mr-4 sm:mr-2' alt="" />}
+                                  {content?.planImg6 &&<img src={content?.planImg6} width="60px" className='lg:mr-4 md:mr-4 sm:mr-2' alt=""/>}
+                                  {content?.planImg7 && <img src={content?.planImg7} width="30px" className='lg:mr-4 md:mr-4 sm:mr-2' alt=""/>}
+                                  {content?.planImg8 &&<img src={content?.planImg8} width="35px" className='lg:mr-4 md:mr-4 sm:mr-2' alt=""/>}
                               </div>
 
                         <div ><AiOutlineRight   className='iconStyle icon text-white-700 text-2xl '/></div></div>

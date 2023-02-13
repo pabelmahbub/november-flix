@@ -15,7 +15,7 @@ function NavbarSignUp() {
           <ul className="menu menu-horizontal px-1">
               <div className="navbar-end">
               <Link to='/signup'>
-                  <p className="textSign text-2xl font-bold">Sign In</p>
+                  <p className="textSign text-2xl font-bold">Sign Up</p>
                 </Link>
               </div>
           

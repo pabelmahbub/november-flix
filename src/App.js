@@ -64,19 +64,19 @@ const router = createBrowserRouter([
     element: <div><SignUpCredit /></div>,
   },
   {
-    path: "/signup/homepage",
+    path: "/homepage",
     element: <div><SignUpHome /></div>,
   },
   {
-    path: "/signup/latest",
+    path: "/latestMovies",
     element: <div><SignUpLatest /></div>,
   },
   {
-    path: "/signup/search",
+    path: "/moviesSearch",
     element: <div><SignUpSearch /></div>,
   },
   {
-    path: "/signup/homepage/:serviceId",
+    path: "/homepage/:serviceId",
     element: <div><DetailMovie /></div>,
   },
   {
