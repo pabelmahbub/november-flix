@@ -111,9 +111,9 @@ function SignUpStep4() {
              <p style={{color:'red',fontWeight:'bold'}}>Already have an account! <Link className="text-blue-700 font-bold"to="/login">Login</Link></p>
 
           </div>
-          {/* <Link to='/signup/paymentPicker'>  */}
-            <button style={{width:'90%',borderRadius:'4px',fontSize:'22px'}} className="btn button text-transform: capitalize">Next3</button>
-            {/* </Link>  */}
+          <Link to='/signup/paymentPicker'> 
+            <button style={{width:'90%',borderRadius:'4px',fontSize:'22px'}} className="btn button text-transform: capitalize">Next</button>
+           </Link> 
 
             
        </div>
