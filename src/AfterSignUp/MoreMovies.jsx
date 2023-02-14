@@ -12,134 +12,72 @@ import m10 from '../Assets/movieImage/m10.jpeg';
 import m11 from '../Assets/movieImage/m11.webp';
 import m12 from '../Assets/movieImage/m12.jpeg';
 import m13 from '../Assets/movieImage/m13.jpeg';
+import { shuffle } from './Shuffle';
+import Loading from '../Components/Loading';
 
 import NavbarAfterSignIn from '../Navbar/NavbarAfterSignIn'
 import Footer from '../Footer/Footer';
 
 function MoreMovies() {
+  const [loading, setLoading] = useState(false);
+  const [movies, setMovies] = useState([])
+
+  useEffect(() => {
+   fetch(`https://nenflix-server-production.up.railway.app/movies`)
+   .then(res => res.json())
+   .then(data => setMovies(data))
+ 
+   
+ }, [])
+
   return (
     <>
     <div style={{backgroundColor:'#20262E',paddingBottom:'50%'}}>
         <NavbarAfterSignIn />
+       
+          <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Similar movies</h1>
+             <div  class="flex overflow-x-auto" >
+                <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
+                 
+                  {shuffle(movies).map(movie => 
+                     <div >
+                          <img src={movie.Poster} class="h-72 w-60" alt="" style={{objectFit:'cover'}}/>
+                          <p className="movieTextStyle py-2">{movie.Title}</p> 
+                      </div>       
+                    )}
+                   </section>
+             </div> 
 
-      <h1 className="textLeft lg:text-2xl md:text-xl sm:text-xl font-bold pt-6 pl-6 pb-6">More movies like this</h1>
+            {/* 2nd section */}
 
-        <div  style={{backgroundColor:'#20262E'}} class="flex overflow-x-auto  bg-blue-200">
-             <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m13} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m2} class="h-72 w-60" alt=""
-                /></span>
-                {/* <span>John</span> */}
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m4} class="h-72 w-60" alt=""
-                /></span>
-                {/* <span>John</span> */}
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m5} class="h-72 w-60" alt=""
-                /></span>
-                {/* <span>John</span> */}
-              </section>
-                <section class="flex-shrink-0 border-4 border-white-300">
-                <span><img src={m1} class="h-72 w-60" alt=""
-                /></span>
-                {/* <span>John</span> */}
-              </section>
-              
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m6} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m7} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m9} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m10} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m11} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m12} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              
-            </div>
+             <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Action</h1>
+             <div  class="flex overflow-x-auto" >
+                <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
+                 
+                  {shuffle(movies).map(movie => 
+                     <div >
+                        <img src={movie.Poster} class="h-72 w-60" alt="" style={{objectFit:'cover'}}/>
+                        <p className="movieTextStyle py-2">{movie.Title}</p>  
+                      </div>       
+                    )}
+                   </section>
+             </div> 
 
+             {/* 3rd section */}
 
-
-
-            <h1 className="textLeft lg:text-2xl md:text-xl sm:text-xl font-bold pt-6 pl-6 pb-6">This month released.</h1>
-
-
-            <div  style={{backgroundColor:'#20262E'}} class="flex overflow-x-auto  bg-blue-200">
+             <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Drama</h1>
+             <div  class="flex overflow-x-auto" >
+                <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
+                 
+                  {shuffle(movies).map(movie => 
+                     <div >
+                        <img src={movie.Poster} class="h-72 w-60" alt="" style={{objectFit:'cover'}}/>
+                        <p className="movieTextStyle py-2">{movie.Title}</p> 
+                      </div>       
+                    )}
+                   </section>
+             </div> 
              
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m5} class="h-72 w-60" alt=""
-                /></span>
-                {/* <span>John</span> */}
-              </section>
-                <section class="flex-shrink-0 border-4 border-white-300">
-                <span><img src={m1} class="h-72 w-60" alt=""
-                /></span>
-                {/* <span>John</span> */}
-              </section>
-              
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m6} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m7} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m13} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m2} class="h-72 w-60" alt=""
-                /></span>
-                {/* <span>John</span> */}
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m4} class="h-72 w-60" alt=""
-                /></span>
-                {/* <span>John</span> */}
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m9} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m10} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m11} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              <section class="flex-shrink-0 border-2 border-white-300">
-              <span><img src={m12} class="h-72 w-60" alt=""
-                /></span>
-              </section>
-              
-            </div>
-
-
-        
-      
       </div>
     <Footer />
     </>

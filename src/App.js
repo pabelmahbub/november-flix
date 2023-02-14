@@ -76,7 +76,7 @@ const router = createBrowserRouter([
     element: <div><SignUpSearch /></div>,
   },
   {
-    path: "/homepage/:serviceId",
+    path: "/homepage/:id",
     element: <div><DetailMovie /></div>,
   },
   {

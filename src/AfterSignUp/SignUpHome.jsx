@@ -23,7 +23,6 @@ import NavbarAfterSignIn from '../Navbar/NavbarAfterSignIn'
 import Footer from '../Footer/Footer';
 import { shuffle } from './Shuffle';
 import Loading from '../Components/Loading';
-import MovieDetail from './MovieDisplay';
 import MovieDisplay from './MovieDisplay';
 
 
@@ -31,47 +30,43 @@ const allMoviesThumbnail =  [m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,
    
     
 
-
+const currentMonth = new Date(Date.now()).toLocaleString('en-us',{month:'short', year:'numeric'})
 
 function SignUpHome() {
 
   const [loading, setLoading] = useState(false);
   const [movies, setMovies] = useState([])
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1000);
+  // }, []);
 
 
   useEffect(() => {
-   fetch('../movies.json')
+   fetch(`https://nenflix-server-production.up.railway.app/movies`)
    .then(res => res.json())
    .then(data => setMovies(data))
  
-   
  }, [])
-
- 
-
 
   return (
     <>
-    {loading ? <Loading /> :
+    {movies.length === 0 ? <Loading /> :
    
       <>
 
       <div style={{backgroundColor:'#20262E',paddingBottom:'5%'}}>
         <NavbarAfterSignIn />
 
-          <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Best of 2023 & 2022</h1>
+          <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Best of {currentMonth}</h1>
             <div  class="flex overflow-x-auto" >
                 <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
 
         {
-         shuffle(movies).map(movie => 
+         movies.map(movie => 
                  <MovieDisplay 
                        key={movie.id}
                        movie={movie}></MovieDisplay>)
@@ -80,9 +75,7 @@ function SignUpHome() {
                </section>
           </div>
 
-
           {/* second section: */}
-
 
           <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Oscar and Grammy winning movies</h1>
             <div  class="flex overflow-x-auto" >
@@ -96,34 +89,24 @@ function SignUpHome() {
                }
 
                </section>
-          </div>
-
+          </div> 
 
            {/* third section: */}
 
-
-           <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Best 10 in Japan this week</h1>
+        <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Best 10 in Japan this week</h1>
             <div  class="flex overflow-x-auto" >
                 <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
 
-        {
-         shuffle(movies).map(movie => 
-                 <MovieDisplay 
+             {
+               shuffle(movies).map(movie => 
+                   <MovieDisplay 
                        key={movie.id}
                        movie={movie}></MovieDisplay>)
-               }
-
-               </section>
-          </div>
-
-
-     
-
-
-
-
-
-    </div>
+               } 
+                   </section>
+               </div>
+ 
+         </div>
     <Footer />
     </>
       }
