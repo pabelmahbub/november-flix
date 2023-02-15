@@ -1,8 +1,6 @@
 import './App.css';
 import {
   createBrowserRouter,
-  Route,
-  Router,
   RouterProvider,
 } from "react-router-dom";
 import Home from './Home/Home';
@@ -12,16 +10,15 @@ import SignUpStep3 from './SignUp/SignUpStep3';
 import SignUpStep4 from './SignUp/SignUpStep4';
 import SignUpPayment from './SignUp/SignUpPayment';
 import SignUpCredit from './SignUp/SignUpCredit';
-import NavbarAfterSignIn from './Navbar/NavbarAfterSignIn';
 import SignUpHome from './AfterSignUp/SignUpHome';
 import SignUpLatest from './AfterSignUp/SignUpLatest';
-import SignUpSeries from './AfterSignUp/SignUpSerarch';
 import SignUpSearch from './AfterSignUp/SignUpSerarch';
-import MovieDetail from './AfterSignUp/MovieDisplay';
 import Login from './SignUp/Login';
 import DetailMovie from './AfterSignUp/DetailMovie';
 import SingleMovieDetail from './AfterSignUp/SingleMovieDetail';
 import MoreMovies from './AfterSignUp/MoreMovies';
+import PostMovies from './MangeApi/PostMovies';
+import NotFound from './Home/NotFound';
 
 
 
@@ -86,6 +83,14 @@ const router = createBrowserRouter([
   {
     path: "/homepage/moremovies",
     element: <div><MoreMovies /></div>,
+  },
+  {
+    path: "/postMovies",
+    element: <div><PostMovies /></div>,
+  },
+  {
+    path: "/*",
+    element: <div><NotFound /></div>,
   },
 
 ]);

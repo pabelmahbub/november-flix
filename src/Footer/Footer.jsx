@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
     let year = new Date().getFullYear() 
@@ -28,6 +29,12 @@ function Footer() {
         </div>
         <div>
            <p style={{color:'#fff',fontFamily:'raleway'}}>Questions? Call 012-345-6789</p>
+           <Link to='/postMovies'>
+           <p style={{color:'#fff',fontFamily:'raleway'}}>Post movies</p>
+           </Link>
+           <Link to='/manageMovie'>
+           <p style={{color:'#fff',fontFamily:'raleway'}}>Delete movies</p>
+           </Link>
            <p style={{color:'#fff',fontFamily:'raleway', fontSize:12}}>© {year}; pabelmahbub@gmail.com</p>
         </div>
 

@@ -49,7 +49,7 @@ function DetailMovie() {
     <NavbarAfterSignIn />
 
           {/* first section */}
-          <div  style={{backgroundColor:'#20262E',paddingTop:'10px'}} >
+          {/* <div  style={{backgroundColor:'#20262E',paddingTop:'10px'}} >
              <h1 className="text-white  text-left lg:text-4xl md:text-xl sm:text-xl font-bold pt-6 pl-6 pb-6">{currentMonth} released movies</h1>
              <div class="flex overflow-x-auto  bg-blue-200">
                 
@@ -61,7 +61,7 @@ function DetailMovie() {
                   </section>
                   ))}
                   </div>
-          </div>
+          </div> */}
 
 
 
@@ -84,10 +84,10 @@ function DetailMovie() {
           </div>
 
           <div style={{display:'flex'}}>
-            <p className="text-green-600 my-5 text-sm font-bold pr-5">{movie.Language}</p>
-            <p className="text-white my-5 text-sm font-bold pr-5">imdbRating is {movie.imdbRating}</p>
-            <p className="text-white my-5 text-sm font-bold pr-5">Released in {movie.Released}</p>
-            <p className="text-white my-5 text-sm font-bold">Runtime is {movie.Runtime}</p>
+          {!movie.Language ? null : <p className="text-green-600 my-5 text-sm font-bold pr-5">{movie.Language && movie?.Language + " available"}</p>}
+          {!movie.imdbRating ? null :<p className="text-white my-5 text-sm font-bold pr-5">{movie?.imdbRating &&  movie?.imdbRating + " imdb Rating" }</p>}
+          {!movie.Released ? null : <p className="text-white my-5 text-sm font-bold pr-5"> {movie?.Released &&  movie?.Released +" released"}</p>}
+         {!movie.Runtime ? null : <p className="text-white my-5 text-sm font-bold">{movie.Runtime && movie.Runtime + " runtime"}</p>}
           </div>
 
 
@@ -105,7 +105,10 @@ function DetailMovie() {
         <p className="text-white mt-4 text-sm">Starring: <span className="text-white  text-sm font-bold">{movie.Actors}</span></p>
         <p className="text-white mt-2 text-sm">Director: <span className="text-white text-sm font-bold">{movie.Director}</span></p>
         <p className="text-white mt-2 text-sm">Genres: <span className="text-white  text-sm font-bold">{movie.Genre}</span></p>
-        <p className="text-white mt-3 text-sm">The series has been positively received from critics and audiences. It is the 18th-highest-grossing film series of all time, earning over $3.5 billion worldwide,[1] and is often cited as one of the best action franchises to date. The sixth and most recent film, titled Fallout, was released on July 27, 2018 and is currently the series's highest-grossing entry.</p>
+        {!movie.Link ? null :
+        <p className="text-white mt-2 text-sm">Link: <span className="text-green-500 text-sm font-bold"><a href={movie.Link}>Watch Trailer!</a></span></p>
+        }
+        <p className="text-white mt-3 text-sm">{movie.Details}</p>
 
 
         
@@ -134,3 +137,5 @@ function DetailMovie() {
 }
 
 export default DetailMovie;
+
+

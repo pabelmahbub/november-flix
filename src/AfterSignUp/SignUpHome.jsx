@@ -46,7 +46,7 @@ function SignUpHome() {
 
 
   useEffect(() => {
-   fetch(`https://nenflix-server-production.up.railway.app/movies`)
+   fetch('https://nenflix-server-production.up.railway.app/movies')
    .then(res => res.json())
    .then(data => setMovies(data))
  
