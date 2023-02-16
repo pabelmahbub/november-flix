@@ -3,6 +3,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Home from './Home/Home';
 import SignUp from './SignUp/SignUp';
 import SignUpStep2 from './SignUp/SignUpStep2';
@@ -19,6 +21,7 @@ import SingleMovieDetail from './AfterSignUp/SingleMovieDetail';
 import MoreMovies from './AfterSignUp/MoreMovies';
 import PostMovies from './MangeApi/PostMovies';
 import NotFound from './Home/NotFound';
+import DeleteMovie from './MangeApi/DeleteMovie';
 
 
 
@@ -89,6 +92,10 @@ const router = createBrowserRouter([
     element: <div><PostMovies /></div>,
   },
   {
+    path: "/deleteMovie/",
+    element: <div><DeleteMovie /></div>,
+  },
+  {
     path: "/*",
     element: <div><NotFound /></div>,
   },
@@ -103,8 +110,7 @@ function App() {
     <div className="App">
       
       <RouterProvider router = {router} />
-        
-     
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

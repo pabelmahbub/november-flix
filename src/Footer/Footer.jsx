@@ -32,7 +32,7 @@ function Footer() {
            <Link to='/postMovies'>
            <p style={{color:'#fff',fontFamily:'raleway'}}>Post movies</p>
            </Link>
-           <Link to='/manageMovie'>
+           <Link to='/deleteMovie'>
            <p style={{color:'#fff',fontFamily:'raleway'}}>Delete movies</p>
            </Link>
            <p style={{color:'#fff',fontFamily:'raleway', fontSize:12}}>© {year}; pabelmahbub@gmail.com</p>

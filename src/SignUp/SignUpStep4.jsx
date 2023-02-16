@@ -1,6 +1,9 @@
 import { createUserWithEmailAndPassword } from '@firebase/auth';
 import { Result } from 'postcss';
-import React, { useContext, useState } from 'react'
+import {toast } from 'react-toastify';
+import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import elvis from '../../src/Assets/movieImage/m11.webp'
 import { Form, Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 import FooterSignUp from '../Footer/FooterSignUp';
@@ -9,115 +12,76 @@ import NavbarSignUp from '../Navbar/NavbarSignUp';
 
 function SignUpStep4() {
   const {createUser} = useContext(AuthContext);
+  const navigate = useNavigate();
 
-    const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      password: '',
-    });
-  
-    const handleChange = event => {
-      setFormData({
-        ...formData,
-        [event.target.name]: event.target.value,
-      });
-    };
-  
-    const handleSubmit = event => {
-      event.preventDefault();
-      console.log('Form data:', formData);
-    };
+ 
 
+    const handleSignUp=(e)=>{
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value;
+      const email = form.email.value;
+      const password = form.password.value;
 
-  // const handleSignUp = (event) =>{
-  //   event.preventDefault();
-  //   const form = event.target;
-  //   const email = form.email.value;
-  //   const password = form.password.value;
-  //   {console.log('data', email, password)}
+      createUser(email, password)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        navigate('/signup/paymentPicker');
+        toast.success('Nenflix account created successfully!');
 
-  //   createUser(email, password)
-  //       .then(result =>{
-  //         const user = result.user;
-  //           console.log(user)
+      })
+      .catch(err=> console.log(err));
+      
+    }
 
-  //       })
-  //      .catch(err => console.error(err));
-  //   }
-
-  // const handleRegister =(e)=>{
-  //   e.preventDefault();
-  //   console.log(e.target.email.value);
-
-  // }
 
   return (
     <div>
 
 <NavbarSignUp />
 
-<div style={{paddingTop:'5%',paddingBottom:'7%',display:'flex', justifyContent:'center'}}>
-         <div className="card bg-base-100">
-             
-          <div className="card-body text-left">
-              <p className="text-sm text-left">STEP 2 OF 3</p>
-              <h2 className="card-title text-3xl">SignUp-Create a password to start<br/>your membership</h2>
-              <p className="text-xl pb-3">Just a few more steps and you're done!<br/>We hate paperwork too.</p>
-                
-    
-<form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Email" 
-          style={{borderRadius:'0px'}} 
-          className="input input-bordered  w-full mb-2" />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Add a Email" 
-          style={{borderRadius:'0px'}} className="input input-bordered  w-full" />
-      </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Add a password" style={{borderRadius:'0px'}} className="input input-bordered  w-full" />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
 
-    <div style={{display:'flex',marginTop:'10px'}}>
-               <input type="checkbox" style={{borderRadius:'0px',backgroundColor:'#fff'}} className="checkbox checkbox-md mr-3" />
-               <p className="text- pb-3">Please do not email me Nenflix special offers.</p>
-             </div>
+<div className="hero w-full my-20">
+  <div className="hero-content grid md:grid-cols-2 flex-col lg:flex-row-reverse">
+    <div className="text-center lg:text-left">
+      <img src={elvis} width="400px" className='mr-4' alt=""/>
+    </div>
+    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <h1 className="text-5xl text-center font-bold mt-10">SignUp</h1>
+
+      <form className="card-body" onSubmit={handleSignUp}>
+        <div className="form-control">
+          <label className="label">
+            <span  className="label-text">Name</span>
+          </label> 
+           <input type="text" name="name" placeholder="Your name" className="input input-bordered" />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span  className="label-text">Email</span>
+          </label>
+          <input type="text" name="email" placeholder="email address" className="input input-bordered" />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span  className="label-text">Password</span>
+          </label>
+          <input type="text" name="password" placeholder="password" className="input input-bordered" />
+          {/* <label className="label">
+            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+          </label> */}
+        </div>
+        <div className="form-control mt-6">
+          <input  style={{borderRadius:'4px'}} className="btn button text-transform:capitalize" type="submit" value="signup" />
+        </div>
+      </form>
+      <p className='pt-2 pb-4'>Already have an account. <Link to='/login' className='text-orange-600 font-bold'>Login</Link></p>
+    </div>
+  </div>
+</div>
 
 
-             <p style={{color:'red',fontWeight:'bold'}}>Already have an account! <Link className="text-blue-700 font-bold"to="/login">Login</Link></p>
-
-          </div>
-          <Link to='/signup/paymentPicker'> 
-            <button style={{width:'90%',borderRadius:'4px',fontSize:'22px'}} className="btn button text-transform: capitalize">Next</button>
-           </Link> 
-
-            
-       </div>
-      </div>
 
             <FooterSignUp />
 
