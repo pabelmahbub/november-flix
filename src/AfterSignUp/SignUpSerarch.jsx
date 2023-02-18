@@ -22,8 +22,8 @@ function SignUpSearch() {
 
 
   const handleSearch = event => {
-    setSearchTerm(event.target.value);
-    const filteredResults = movies.filter(movie => movie.Genre.toLowerCase().includes(searchTerm.toLowerCase()));
+    setSearchTerm(event.target.value.trim());
+    const filteredResults = movies.filter(movie => movie.Genre.toLowerCase().includes(searchTerm.toLowerCase())|| movie.Title.toLowerCase().includes(searchTerm.toLowerCase()));
     setSearchResults(filteredResults);
   };
 
@@ -40,10 +40,10 @@ function SignUpSearch() {
     <div  style={{backgroundColor:'#20262E',paddingBottom:'10%'}}>
         <NavbarAfterSignIn />
 
-        <input type="text"  placeholder= "Type movie genre(romantic, horror, crime,... ...)" style={{borderRadius:'0px',borderRadius:'4px'}} className="input input-bordered  lg:w-2/5 md:w-1/2 sm:w-4/6 py-2 px-6 mt-6" onChange={handleSearch}   />
+        <input type="text"  placeholder= "Type movie name / genre(romantic, horror, crime,... ...)" style={{borderRadius:'0px',borderRadius:'4px'}} className="input input-bordered  lg:w-2/5 md:w-1/2 sm:w-4/6 py-2 px-6 mt-6" onChange={handleSearch}   />
 
         {/* first section */}
-        <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Best of 2023 & 2022</h1>
+        <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Worldwide Best</h1>
         <div  style={{backgroundColor:'#fff'}} class="flex overflow-x-auto" >
 
              {(searchTerm.length === 0) && shuffle(movies).map(myMovie=>(

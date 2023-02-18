@@ -26,12 +26,14 @@ function SignUpStep4() {
       createUser(email, password)
       .then(result => {
         const user = result.user;
+        form.reset();
         console.log(user);
         navigate('/signup/paymentPicker');
         toast.success('Nenflix account created successfully!');
 
       })
       .catch(err=> console.log(err));
+      form.reset();
       
     }
 

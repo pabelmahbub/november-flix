@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import {toast } from 'react-toastify';
-import pc from '../../src/Assets/movieImage/m2.webp'
+import sideImage from '../../src/Assets/movieImage/m18.jpg'
 import { Form, Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
@@ -21,10 +21,13 @@ function Login() {
       loginUser(email, password)
       .then(result => {
         const user = result.user;
+        form.reset();
         console.log(user);
+       
         navigate('/homepage');
       })
       .catch(err=> console.log(err));
+      form.reset();
     }
 
  
@@ -37,7 +40,7 @@ function Login() {
                 <div className="hero w-full my-20">
             <div className="hero-content grid md:grid-cols-2 flex-col lg:flex-row-reverse">
               <div className="text-center lg:text-left">
-               <img src={pc} width="400px" height="100px" className='mr-4' alt=""/>
+               <img src={sideImage} width="400px" height="100px" className='mr-4' alt=""/>
               </div>
               <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
               <h1 className="text-5xl text-center font-bold mt-10">Login</h1>
