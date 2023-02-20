@@ -21,13 +21,13 @@ function NavbarAfterSignIn() {
       <Link to='/moviesSearch'>
          <a className=" btn btn-ghost normal-case lg:text-xl md:text-sm text-white">Search Movie</a>
       </Link>
-       {/* <Link to=''>
-         <a className=" btn btn-ghost normal-case lg:text-xl md:text-sm">Films</a>
-      </Link> */}
-      {/* <Link to=''>
-         <a className=" btn btn-ghost normal-case lg:text-xl md:text-sm">My List</a>
-      </Link> */}
-
+      <Link to='/postMovies'>
+         <a className="btn btn-ghost normal-case lg:text-xl md:text-sm text-white">Post Movie</a>
+      </Link>
+       <Link to='/deleteMovie'>
+         <a className="btn btn-ghost normal-case lg:text-xl md:text-sm text-white">Delete Movie</a>
+      </Link>
+      
       </div>
     </div>
 

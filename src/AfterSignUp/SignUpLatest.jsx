@@ -3,20 +3,14 @@ import NavbarAfterSignIn from '../Navbar/NavbarAfterSignIn'
 import Footer from '../Footer/Footer';
 import { shuffle } from './Shuffle';
 import Loading from '../Components/Loading';
+import { useLoaderData } from 'react-router-dom';
 
 
 const currentMonth = new Date(Date.now()).toLocaleString('en-us',{month:'short', year:'numeric'})
 
 function SignUpLatest() {
-  const [movies, setMovies] = useState([])
-  
-  useEffect(() => {
-   fetch(`https://nenflix-server-production.up.railway.app/movies`)
-   .then(res => res.json())
-   .then(data => setMovies(data))
- 
-   
- }, [])
+  const movies = useLoaderData();
+
 
 
   return (

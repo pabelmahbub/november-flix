@@ -3,22 +3,15 @@ import './HomePage.css';
 import NavbarAfterSignIn from '../Navbar/NavbarAfterSignIn'
 import Footer from '../Footer/Footer';
 import { shuffle } from './Shuffle';
-import { useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Loading from '../Components/Loading';
 
 
 function SignUpSearch() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [movies, setMovies] = useState([])
+  const movies = useLoaderData();
 
-
-  useEffect(() => {
-   fetch(`https://nenflix-server-production.up.railway.app/movies`)
-   .then(res => res.json())
-   .then(data => setMovies(data))
-   
- }, [])
 
 
   const handleSearch = event => {

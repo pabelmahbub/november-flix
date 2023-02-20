@@ -24,6 +24,7 @@ import Footer from '../Footer/Footer';
 import { shuffle } from './Shuffle';
 import Loading from '../Components/Loading';
 import MovieDisplay from './MovieDisplay';
+import { useLoaderData } from 'react-router-dom';
 
 
 const allMoviesThumbnail =  [m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18]
@@ -34,23 +35,7 @@ const currentMonth = new Date(Date.now()).toLocaleString('en-us',{month:'short',
 
 function SignUpHome() {
 
-  const [loading, setLoading] = useState(false);
-  const [movies, setMovies] = useState([])
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1000);
-  // }, []);
-
-
-  useEffect(() => {
-   fetch('https://nenflix-server-production.up.railway.app/movies')
-   .then(res => res.json())
-   .then(data => setMovies(data))
- 
- }, [])
+   const movies = useLoaderData()
 
   return (
     <>

@@ -1,43 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import NavbarAfterSignIn from '../Navbar/NavbarAfterSignIn';
-import { shuffle } from './Shuffle';
 import Footer from '../Footer/Footer';
 import { AiFillCaretRight, AiFillLike, AiOutlinePlus } from 'react-icons/ai';
 import 'react-toastify/dist/ReactToastify.css';
-import SingleMovieDetail from './SingleMovieDetail';
 
 
 const currentMonth = new Date(Date.now()).toLocaleString('en-us',{month:'short', year:'numeric'})
 
 
 function DetailMovie() {
-  const { id } = useParams();
-  const [movie, setMovie] = useState([]);
+  const movie = useLoaderData();
   const [isActive, setIsActive] = useState(false);
 
-  const [movies, setMovies] = useState([])
-  
-  useEffect(() => {
-   fetch(`https://nenflix-server-production.up.railway.app/movies`)
-   .then(res => res.json())
-   .then(data => setMovies(data))
- 
-   
- }, [])
-
-
-  useEffect(() => {
-  const url =`https://nenflix-server-production.up.railway.app/movies/${id}`;
-  fetch(url)
-  .then(res =>res.json())
-  .then(data => setMovie(data));
-},[])
-
     const handleClick = () => {
-      // 👇️ toggle
+      //  toggle
       setIsActive(current => !current);
-      // 👇️ or set to true
+      //  or set to true
       // setIsActive(true);
     };
     
@@ -47,22 +26,6 @@ function DetailMovie() {
     <>
 
     <NavbarAfterSignIn />
-
-          {/* first section */}
-          {/* <div  style={{backgroundColor:'#20262E',paddingTop:'10px'}} >
-             <h1 className="text-white  text-left lg:text-4xl md:text-xl sm:text-xl font-bold pt-6 pl-6 pb-6">{currentMonth} released movies</h1>
-             <div class="flex overflow-x-auto  bg-blue-200">
-                
-
-              {shuffle(movies).map(myMovie=>(
-                  <section class="flex-shrink-0 border-2 border-white-300">
-                    <img src={myMovie.Poster} class="h-72 w-60" alt="" style={{objectFit:'cover'}}/>
-                    <p className='movieName' key={myMovie.id}>{myMovie.Title}</p> 
-                  </section>
-                  ))}
-                  </div>
-          </div> */}
-
 
 
   <div style={{backgroundColor:"#1e1e1e"}} className="hero min-h-screen ">
