@@ -30,8 +30,11 @@ function Banner() {
          <Navbar />
 
        </div>
-
-          <img className='image img-gradient' src={currentImage} alt="Shoes" style={{opacity:'90%'}}/>
+       {!currentImage ?
+          <img className='image img-gradient' src={image2} style={{opacity:'90%'}}/>
+          :
+          <img className='image img-gradient' src={currentImage} style={{opacity:'90%'}}/>
+       }
        </div>
 
      <div className="hero-content text-center text-neutral-content">
