@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
-import image1 from '../Assets/images/home-bg3.png';
+import image2 from '../Assets/images/home-bg2.webp';
+import image3 from '../Assets/images/home-bg3.png';
+import image4 from '../Assets/images/home-bg4.jpeg';
 import Email from '../Components/Email';
 import Navbar from '../Navbar/Navbar';
 
+
+const images = [ image2, image3, image4];
+
+
 function Banner() {
+    const [currentImage, setCurrentImage] = useState(null);
+
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+          setCurrentImage(images[Math.floor(Math.random() * images.length)]);
+      }, 5000)
+      
+      return () => clearInterval(intervalId);
+  }, [])
+
+
   return (
     <div className="hero min-h-screen">
      
@@ -14,7 +31,7 @@ function Banner() {
 
        </div>
 
-          <img className='image img-gradient' src={image1} alt="Shoes" style={{opacity:'90%'}}/>
+          <img className='image img-gradient' src={currentImage} alt="Shoes" style={{opacity:'90%'}}/>
        </div>
 
      <div className="hero-content text-center text-neutral-content">
