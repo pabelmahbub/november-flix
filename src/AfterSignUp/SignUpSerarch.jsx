@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import { shuffle } from './Shuffle';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Loading from '../Components/Loading';
+import MovieDisplay from './MovieDisplay';
 
 
 function SignUpSearch() {
@@ -16,7 +17,7 @@ function SignUpSearch() {
 
   const handleSearch = event => {
     setSearchTerm(event.target.value.trim());
-    const filteredResults = movies.filter(movie => movie.Genre.toLowerCase().includes(searchTerm.toLowerCase())|| movie.Title.toLowerCase().includes(searchTerm.toLowerCase()));
+    const filteredResults = movies.filter(movie => movie.Genre.toLowerCase().includes(searchTerm.toLowerCase()) || movie.Title.toLowerCase().includes(searchTerm.toLowerCase()));
     setSearchResults(filteredResults);
   };
 
@@ -37,25 +38,23 @@ function SignUpSearch() {
 
         {/* first section */}
         <h1 className="textLeft lg:text-3xl md:text-2xl sm:text-xl font-bold pt-12 pl-6 pb-6">Worldwide Best</h1>
-        <div  style={{backgroundColor:'#fff'}} class="flex overflow-x-auto" >
+        <div  class="flex overflow-x-auto" >
+                <section  style={{display:'flex', flexDirection:'row'}}class="flex-shrink-0 border-2 border-white-300">
 
-             {(searchTerm.length === 0) && shuffle(movies).map(myMovie=>(
-              //  <button onClick={()=> navigateToServiceDetail(myMovie.id)}>
-                <section class="flex-shrink-0 border-2 border-white-300">
-                   <img src={myMovie.Poster} class="h-72 w-60" alt="" style={{objectFit:'cover'}}/>
-                   <p className='movieName' key={myMovie.id}>{myMovie.Title}</p> 
-                </section>
-                // </button>
+        {
+         (searchTerm.length == 0) && movies.map(movie => 
+                 <MovieDisplay 
+                       key={movie.id}
+                       movie={movie}></MovieDisplay>)
+               }
 
-                 ))}
-
-             {searchResults.map(movie => (
-                 <section class="flex-shrink-0 border-2 border-white-300">
-                     <img src={movie.Poster} class="h-72 w-60" alt="" />
-                     <p className='movieName' key={movie.id}>{movie.Title}</p> 
-                </section>
-                 ))}
-               
+{
+         (searchTerm.length !== 0) && searchResults.map(movie => 
+                 <MovieDisplay 
+                       key={movie.id}
+                       movie={movie}></MovieDisplay>)
+               }
+             </section>  
           </div>
 
           {/* Second section */}
