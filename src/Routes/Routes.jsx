@@ -21,6 +21,7 @@ import {
   import PostMovies from '../MangeApi/PostMovies';
   import NotFound from '../Home/NotFound';
   import DeleteMovie from '../MangeApi/DeleteMovie';
+import RequiredAuth from "../contexts/AuthProvider/RequiredAuth";
 
 
 
@@ -56,32 +57,32 @@ export const router = createBrowserRouter([
     },
     {
       path: "/signup/paymentPicker",
-      element: <div><SignUpPayment /></div>,
+      element: <div><RequiredAuth><SignUpPayment /></RequiredAuth></div>,
     },
     {
       path: "/signup/creditoption",
-      element: <div><SignUpCredit /></div>,
+      element: <div><RequiredAuth><SignUpCredit /></RequiredAuth></div>,
     },
     {
       path: "/homepage",
       loader: async () => { 
         return fetch('https://nenflix-server-production.up.railway.app/movies');
       },
-      element: <div><SignUpHome /></div>,
+      element: <div><RequiredAuth><SignUpHome /></RequiredAuth></div>,
     },
     {
       path: "/latestMovies",
       loader: async () => { 
         return fetch('https://nenflix-server-production.up.railway.app/movies');
       },
-      element: <div><SignUpLatest /></div>,
+      element: <div><RequiredAuth><SignUpLatest /></RequiredAuth></div>,
     },
     {
       path: "/moviesSearch",
       loader: async () => { 
         return fetch('https://nenflix-server-production.up.railway.app/movies');
       },
-      element: <div><SignUpSearch /></div>,
+      element: <div><RequiredAuth><SignUpSearch /></RequiredAuth></div>,
     },
     {
       path: "/homepage/:id",
@@ -89,26 +90,26 @@ export const router = createBrowserRouter([
         console.log(params.id);
         return fetch(`https://nenflix-server-production.up.railway.app/movies/${params.id}`);
       },
-      element: <div><DetailMovie /></div>,
+      element: <div><RequiredAuth><DetailMovie /></RequiredAuth></div>,
     },
     {
       path: "/homepage/singlemoviedetail",
-      element: <div><SingleMovieDetail /></div>,
+      element: <div><RequiredAuth><SingleMovieDetail /></RequiredAuth></div>,
     },
     {
       path: "/homepage/moremovies",
       loader: async () => { 
         return fetch('https://nenflix-server-production.up.railway.app/movies');
       },
-      element: <div><MoreMovies /></div>,
+      element: <div><RequiredAuth><MoreMovies /></RequiredAuth></div>,
     },
     {
       path: "/postMovies",
-      element: <div><PostMovies /></div>,
+      element: <div><RequiredAuth><PostMovies /></RequiredAuth></div>,
     },
     {
       path: "/deleteMovie/",
-      element: <div><DeleteMovie /></div>,
+      element: <div><RequiredAuth><DeleteMovie /></RequiredAuth></div>,
     },
     {
       path: "/*",

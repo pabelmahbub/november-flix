@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Components.css';
 import { AiOutlineRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 
 
 function Email() {
+  const {user} = useContext(AuthContext);
   const [value, setValue] = useState("")
   const [isOpened, setIsOpened] = useState(false);
   const { t, i18n } = useTranslation();
@@ -24,7 +26,7 @@ function Email() {
    
         <div>
            <input style={{color:'#000',borderRadius:'0px'}} className='email-placeholder' required type="text" id="email" placeholder='Email address' name="email" onChange={handleChange} />
-           {value && value.length > 7  ? 
+           {value === user?.email  ? 
            <Link to="/homepage">
                 <button  className="btn button">{t('Welcome')}<AiOutlineRight  className='icon text-white-700 text-2xl'/></button>
            </Link>

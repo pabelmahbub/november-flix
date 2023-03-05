@@ -11,6 +11,7 @@ const images = [ image2, image3, image4];
 
 
 function Banner() {
+    
     const [currentImage, setCurrentImage] = useState(null);
 
     useEffect(() => {
