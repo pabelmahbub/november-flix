@@ -7,11 +7,13 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      "Welcome": "Get Started"
+      "Welcome": "Get Started",
+      "Welcome1": "Watch Movies"
     }
   },
   fr: {
     translation: {
+      "Welcome": "始めましょう",
       "Welcome": "始めましょう"
     }
   }

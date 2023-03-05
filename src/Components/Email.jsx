@@ -22,24 +22,31 @@ function Email() {
   }
 
   return (
-    <>
+    <> 
+    {!user   ? 
    
         <div>
+       
            <input style={{color:'#000',borderRadius:'0px'}} className='email-placeholder' required type="text" id="email" placeholder='Email address' name="email" onChange={handleChange} />
-           {value === user?.email  ? 
-           <Link to="/homepage">
+          
+           <Link to="/login">
                 <button  className="btn button">{t('Welcome')}<AiOutlineRight  className='icon text-white-700 text-2xl'/></button>
            </Link>
-                :
-            <Link to='/'>
-                <button onClick={toggle} className="btn button">{t('Welcome')}<AiOutlineRight  className='icon text-white-700 text-2xl'/></button>
-            </Link>
+               
              
-             }
+             
 
-            {isOpened && ( <p style={{fontSize:'18px',fontWeight:'bold', color:'red',paddingTop:'10px'}}>Please fill out your correct <span style={{color:'#fff'}}>email address.</span></p>)}
-
+            {/* {isOpened && ( <p style={{fontSize:'18px',fontWeight:'bold', color:'red',paddingTop:'10px'}}>Please fill out your correct <span style={{color:'#fff'}}>email address.</span></p>)}
+         */}
         </div>
+
+
+        :
+        <Link to='/homepage'>
+            <button onClick={toggle} className="btn button">{t('Welcome1')}<AiOutlineRight  className='icon text-white-700 text-2xl'/></button>
+        </Link>
+
+        }
         </>
   )
 }
