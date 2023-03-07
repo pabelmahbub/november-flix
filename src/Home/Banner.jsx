@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Home.css';
 import image2 from '../Assets/images/home-bg2.webp';
 import image3 from '../Assets/images/home-bg3.png';
 import image4 from '../Assets/images/home-bg4.jpeg';
 import Email from '../Components/Email';
 import Navbar from '../Navbar/Navbar';
+import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 
 
 const images = [ image2, image3, image4];
 
 
 function Banner() {
-    
-    const [currentImage, setCurrentImage] = useState(null);
+  　　const {user} = useContext(AuthContext);
+   　 const [currentImage, setCurrentImage] = useState(null);
 
     useEffect(() => {
       const intervalId = setInterval(() => {
@@ -42,9 +43,12 @@ function Banner() {
      <div>
 
      <h1 className="textStyle text-5xl font-bold mb-5">Unlimited Movies,<br/>TV shows, and anime</h1>
-      <p className="textStyle my-5 lg:text-3xl md:text-xl sm:text-sm font-bold">Watch anywhere. Cancel anytime.</p>
-      <p className="textStyle my-8 lg:text-2xl md:text-xl sm:text-sm">Ready to watch? Enter your email to crate or restart your membership.</p>
-      
+     {!user &&
+      <>
+        <p className="textStyle my-5 lg:text-3xl md:text-xl sm:text-sm font-bold">Watch anywhere. Cancel anytime.</p>
+        <p className="textStyle my-8 lg:text-2xl md:text-xl sm:text-sm">Ready to watch? Enter your email to crate or restart your membership.</p>
+      </>
+      }
       
       <Email />
       
